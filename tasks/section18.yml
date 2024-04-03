@@ -1,7 +1,7 @@
 ---
 
 # one of the settings in the file render the server unreachable from ansible with this message "the specified credentials were rejected by the server"
-- name: "SCORED | 18.1.1.1 | PATCH | (L1) Ensure 'Prevent enabling lock screen camera' is set to 'Enabled'"
+- name: "SCORED | 18.1.1.1 | PATCH | (L1) Ensure Prevent enabling lock screen camera is set to Enabled"
   ansible.windows.win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windows\Personalization
       name: NoLockScreenCamera
@@ -15,7 +15,7 @@
       - rule_18.1.1.1
       - patch
 
-- name: "SCORED | 18.1.1.2 | PATCH | (L1) Ensure 'Prevent enabling lock screen slide show' is set to 'Enabled'"
+- name: "SCORED | 18.1.1.2 | PATCH | (L1) Ensure Prevent enabling lock screen slide show is set to Enabled"
   ansible.windows.win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windows\Personalization
       name: NoLockScreenSlideshow
@@ -29,7 +29,7 @@
       - rule_18.1.1.2
       - patch
 
-- name: "SCORED | 18.1.2.2 | PATCH | (L1) Ensure 'Allow users to enable online speech recognition services' is set to 'Disabled'"
+- name: "SCORED | 18.1.2.2 | PATCH | (L1) Ensure Allow users to enable online speech recognition services is set to Disabled"
   ansible.windows.win_regedit:
       path: HKLM:\SOFTWARE\Policies\Microsoft\InputPersonalization
       name: AllowInputPersonalization
@@ -43,7 +43,7 @@
       - rule_18.1.2.2
       - patch
 
-- name: "SCORED | 18.1.3 | AUDIT | (L2) Ensure 'Allow Online Tips' is set to 'Disabled'"
+- name: "SCORED | 18.1.3 | AUDIT | (L2) Ensure Allow Online Tips is set to Disabled"
   ansible.windows.win_regedit:
       path: HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer
       name: AllowOnlineTips
@@ -71,7 +71,7 @@
       - rule_18.2.1
       - patch
 
-- name: "SCORED | 18.2.2 | AUDIT | (L1) Ensure 'Do not allow password expiration time longer than required by policy' is set to 'Enabled' (MS only)"
+- name: "SCORED | 18.2.2 | AUDIT | (L1) Ensure Do not allow password expiration time longer than required by policy is set to Enabled (MS only)"
   ansible.windows.win_regedit:
       path: HKLM:\SOFTWARE\Policies\Microsoft Services\AdmPwd
       name: PwdExpirationProtectionEnabled
@@ -85,7 +85,7 @@
       - rule_18.2.2
       - audit
 
-- name: "SCORED | 18.2.3 | AUDIT | (L1) Ensure 'Enable Local Admin Password Management' is set to 'Enabled' (MS only)"
+- name: "SCORED | 18.2.3 | AUDIT | (L1) Ensure Enable Local Admin Password Management is set to Enabled (MS only)"
   ansible.windows.win_regedit:
       path: HKLM:\SOFTWARE\Policies\Microsoft Services\AdmPwd
       name: AdmPwdEnabled
@@ -99,7 +99,7 @@
       - rule_18.2.3
       - audit
 
-- name: "SCORED | 18.2.4 | AUDIT | (L1) Ensure 'Password Settings: Password Complexity' is set to 'Enabled: Large letters + small letters + numbers + special characters' (MS only)"
+- name: "SCORED | 18.2.4 | AUDIT | (L1) Ensure Password Settings: Password Complexity is set to Enabled: Large letters + small letters + numbers + special characters (MS only)"
   ansible.windows.win_regedit:
       path: HKLM:\SOFTWARE\Policies\Microsoft Services\AdmPwd
       name: PasswordComplexity
@@ -113,7 +113,7 @@
       - rule_18.2.4
       - audit
 
-- name: "SCORED | 18.2.5 | AUDIT | (L1) Ensure 'Password Settings: Password Length' is set to 'Enabled: 15 or more'"
+- name: "SCORED | 18.2.5 | AUDIT | (L1) Ensure Password Settings: Password Length is set to Enabled: 15 or more"
   ansible.windows.win_regedit:
       path: HKLM:\SOFTWARE\Policies\Microsoft Services\AdmPwd
       name: PasswordLength
@@ -126,7 +126,7 @@
       - rule_18.2.5
       - audit
 
-- name: "SCORED | 18.2.6 | AUDIT | (L1) Ensure 'Password Settings: Password Age (Days)' is set to 'Enabled: 30 or fewer' (MS only)"
+- name: "SCORED | 18.2.6 | AUDIT | (L1) Ensure Password Settings: Password Age (Days) is set to Enabled: 30 or fewer (MS only)"
   ansible.windows.win_regedit:
       path: HKLM:\SOFTWARE\Policies\Microsoft Services\AdmPwd
       name: PasswordAgeDays
@@ -140,7 +140,7 @@
       - rule_18.2.6
       - audit
 
-- name: "SCORED | 18.3.1 | AUDIT | (L1) Ensure 'Apply UAC restrictions to local accounts on network logons' is set to 'Enabled' (MS only)"
+- name: "SCORED | 18.3.1 | AUDIT | (L1) Ensure Apply UAC restrictions to local accounts on network logons is set to Enabled (MS only)"
   ansible.windows.win_regedit:
       path: HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System
       name: LocalAccountTokenFilterPolicy
@@ -154,7 +154,7 @@
       - rule_18.3.1
       - audit
 
-- name: "SCORED | 18.3.2 | AUDIT | (L1) Ensure 'Configure SMB v1 client driver' is set to 'Enabled: Disable driver (recommended)'"
+- name: "SCORED | 18.3.2 | AUDIT | (L1) Ensure Configure SMB v1 client driver is set to Enabled: Disable driver (recommended)"
   ansible.windows.win_regedit:
       path: HKLM:\SYSTEM\CurrentControlSet\Services\mrxsmb10
       name: Start
@@ -168,7 +168,7 @@
       - rule_18.3.2
       - audit
 
-- name: "SCORED | 18.3.3 | PATCH | (L1) Ensure 'Configure SMB v1 server' is set to 'Disabled'"
+- name: "SCORED | 18.3.3 | PATCH | (L1) Ensure Configure SMB v1 server is set to Disabled"
   ansible.windows.win_regedit:
       path: HKLM:\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters
       name: SMB1
@@ -184,7 +184,7 @@
       - rule_18.3.3
       - patch
 
-- name: "SCORED | 18.3.4 | PATCH | (L1) Ensure 'Enable Structured Exception Handling Overwrite Protection (SEHOP)' is set to 'Enabled'"
+- name: "SCORED | 18.3.4 | PATCH | (L1) Ensure Enable Structured Exception Handling Overwrite Protection (SEHOP) is set to Enabled"
   ansible.windows.win_regedit:
       path: HKLM:\SYSTEM\CurrentControlSet\Control\Session Manager\kernel
       name: DisableExceptionChainValidation
@@ -199,7 +199,7 @@
       - rule_18.3.4
       - patch
 
-- name: "SCORED | 18.3.5 | PATCH | (L1) Ensure 'Extended Protection for LDAP Authentication (Domain Controllers only)' is set to 'Enabled: Enabled, always (recommended)' (DC Only)"
+- name: "SCORED | 18.3.5 | PATCH | (L1) Ensure Extended Protection for LDAP Authentication (Domain Controllers only) is set to Enabled: Enabled, always (recommended) (DC Only)"
   ansible.windows.win_regedit:
       path: HKLM:\SYSTEM\CurrentControlSet\Services\NTDS\Parameters
       name: LdapEnforceChannelBinding
@@ -213,7 +213,7 @@
       - rule_18.3.5
       - patch
 
-- name: "SCORED | 18.3.6 | PATCH | (L1) Ensure 'NetBT NodeType configuration' is set to 'Enabled: P-node (recommended)'"
+- name: "SCORED | 18.3.6 | PATCH | (L1) Ensure NetBT NodeType configuration is set to Enabled: P-node (recommended)"
   ansible.windows.win_regedit:
       path: HKLM:\SYSTEM\CurrentControlSet\Services\NetBT\Parameters
       value: NodeType
@@ -228,7 +228,7 @@
       - rule_18.3.6
       - patch
 
-- name: "SCORED | 18.3.7 | PATCH | (L1) Ensure 'WDigest Authentication' is set to 'Disabled'"
+- name: "SCORED | 18.3.7 | PATCH | (L1) Ensure WDigest Authentication is set to Disabled"
   ansible.windows.win_regedit:
       path: HKLM:\SYSTEM\CurrentControlSet\Control\SecurityProviders\Wdigest
       value: UseLogonCredential
@@ -243,7 +243,7 @@
       - rule_18.3.6
       - patch
 
-- name: "SCORED | 18.4.1 | PATCH | (L1) Ensure 'MSS: (AutoAdminLogon) Enable Automatic Logon (not recommended)' is set to 'Disabled'"
+- name: "SCORED | 18.4.1 | PATCH | (L1) Ensure MSS: (AutoAdminLogon) Enable Automatic Logon (not recommended) is set to Disabled"
   ansible.windows.win_regedit:
       path: HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon
       value: AutoAdminLogon
@@ -258,7 +258,7 @@
       - rule_18.4.1
       - patch
 
-- name: "SCORED | 18.4.2 | PATCH | (L1) Ensure 'MSS: (DisableIPSourceRouting IPv6) IP source routing protection level (protects against packet spoofing)' is set to 'Enabled: Highest protection, source routing is completely disabled'"
+- name: "SCORED | 18.4.2 | PATCH | (L1) Ensure MSS: (DisableIPSourceRouting IPv6) IP source routing protection level (protects against packet spoofing) is set to Enabled: Highest protection, source routing is completely disabled"
   ansible.windows.win_regedit:
       path: HKLM:\SYSTEM\CurrentControlSet\Services\Tcpip6\Parameters
       value: DisableIPSourceRouting
@@ -273,7 +273,7 @@
       - rule_18.4.2
       - patch
 
-- name: "SCORED | 18.4.3 | PATCH | (L1) Ensure 'MSS: (DisableIPSourceRouting) IP source routing protection level (protects against packet spoofing)' is set to 'Enabled: Highest protection, source routing is completely disabled'"
+- name: "SCORED | 18.4.3 | PATCH | (L1) Ensure MSS: (DisableIPSourceRouting) IP source routing protection level (protects against packet spoofing) is set to Enabled: Highest protection, source routing is completely disabled"
   ansible.windows.win_regedit:
       path: HKLM:\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters
       value: DisableIPSourceRouting
@@ -288,7 +288,7 @@
       - rule_18.4.3
       - patch
 
-- name: "SCORED | 18.4.4 | PATCH | (L1) Ensure 'MSS: (EnableICMPRedirect) Allow ICMP redirects to override OSPF generated routes' is set to 'Disabled'"
+- name: "SCORED | 18.4.4 | PATCH | (L1) Ensure MSS: (EnableICMPRedirect) Allow ICMP redirects to override OSPF generated routes is set to Disabled"
   ansible.windows.win_regedit:
       path: HKLM:\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters
       value: EnableICMPRedirect
@@ -303,7 +303,7 @@
       - rule_18.4.4
       - patch
 
-- name: "SCORED | 18.4.5 | PATCH | (L2) Ensure 'MSS: (KeepAliveTime) How often keep-alive packets are sent in milliseconds' is set to 'Enabled: 300,000 or 5 minutes (recommended)'"
+- name: "SCORED | 18.4.5 | PATCH | (L2) Ensure MSS: (KeepAliveTime) How often keep-alive packets are sent in milliseconds is set to Enabled: 300,000 or 5 minutes (recommended)"
   ansible.windows.win_regedit:
       path: HKLM:\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters
       value: KeepAliveTime
@@ -318,7 +318,7 @@
       - rule_18.4.5
       - patch
 
-- name: "SCORED | 18.4.6 | PATCH | (L1) Ensure 'MSS: (NoNameReleaseOnDemand) Allow the computer to ignore NetBIOS name release requests except from WINS servers' is set to 'Enabled'"
+- name: "SCORED | 18.4.6 | PATCH | (L1) Ensure MSS: (NoNameReleaseOnDemand) Allow the computer to ignore NetBIOS name release requests except from WINS servers is set to Enabled"
   ansible.windows.win_regedit:
       path: HKLM:\System\Currentcontrolset\Services\Netbt\Parameters
       name: NoNameReleaseOnDemand
@@ -333,7 +333,7 @@
       - rule_18.4.6
       - patch
 
-- name: "SCORED | 18.4.7 | PATCH | (L2) Ensure 'MSS: (PerformRouterDiscovery) Allow IRDP to detect and configure Default Gateway addresses (could lead to DoS)' is set to 'Disabled'"
+- name: "SCORED | 18.4.7 | PATCH | (L2) Ensure MSS: (PerformRouterDiscovery) Allow IRDP to detect and configure Default Gateway addresses (could lead to DoS) is set to Disabled"
   ansible.windows.win_regedit:
       path: HKLM:\System\Currentcontrolset\Services\Tcpip\Parameters
       name: PerformRouterDiscovery
@@ -348,7 +348,7 @@
       - rule_18.4.7
       - patch
 
-- name: "SCORED | 18.4.8 | PATCH | (L1) Ensure 'MSS: (SafeDllSearchMode) Enable Safe DLL search mode (recommended)' is set to 'Enabled'"
+- name: "SCORED | 18.4.8 | PATCH | (L1) Ensure MSS: (SafeDllSearchMode) Enable Safe DLL search mode (recommended) is set to Enabled"
   ansible.windows.win_regedit:
       path: HKLM:\System\Currentcontrolset\Control\Session Manager
       name: SafeDllSearchMode
@@ -363,7 +363,7 @@
       - rule_18.4.8
       - patch
 
-- name: "SCORED | 18.4.9 | PATCH | (L1) Ensure 'MSS: (ScreenSaverGracePeriod) The time in seconds before the screen saver grace period expires (0 recommended)' is set to 'Enabled: 5 or fewer seconds'"
+- name: "SCORED | 18.4.9 | PATCH | (L1) Ensure MSS: (ScreenSaverGracePeriod) The time in seconds before the screen saver grace period expires (0 recommended) is set to Enabled: 5 or fewer seconds"
   ansible.windows.win_regedit:
       path: HKLM:\Software\Microsoft\Windows Nt\Currentversion\Winlogon
       name: ScreenSaverGracePeriod
@@ -378,7 +378,7 @@
       - rule_18.4.9
       - patch
 
-- name: "SCORED | 18.4.10 | PATCH | (L2) Ensure 'MSS: (TcpMaxDataRetransmissions IPv6) How many times unacknowledged data is retransmitted' is set to 'Enabled: 3'"
+- name: "SCORED | 18.4.10 | PATCH | (L2) Ensure MSS: (TcpMaxDataRetransmissions IPv6) How many times unacknowledged data is retransmitted is set to Enabled: 3"
   ansible.windows.win_regedit:
       path: HKLM:\System\Currentcontrolset\Services\Tcpip6\Parameters
       name: TcpMaxDataRetransmissions
@@ -392,7 +392,7 @@
       - rule_18.4.10
       - patch
 
-- name: "SCORED | 18.4.11 | PATCH | (L2) Ensure 'MSS: (TcpMaxDataRetransmissions) How many times unacknowledged data is retransmitted' is set to 'Enabled: 3'"
+- name: "SCORED | 18.4.11 | PATCH | (L2) Ensure MSS: (TcpMaxDataRetransmissions) How many times unacknowledged data is retransmitted is set to Enabled: 3"
   ansible.windows.win_regedit:
       path: HKLM:\System\Currentcontrolset\Services\Tcpip\Parameters
       name: TcpMaxDataRetransmissions
@@ -406,7 +406,7 @@
       - rule_18.4.11
       - patch
 
-- name: "SCORED | 18.4.12 | PATCH | (L1) Ensure 'MSS: (WarningLevel) Percentage threshold for the security event log at which the system will generate a warning' is set to 'Enabled: 90% or less'"
+- name: "SCORED | 18.4.12 | PATCH | (L1) Ensure MSS: (WarningLevel) Percentage threshold for the security event log at which the system will generate a warning is set to Enabled: 90% or less"
   ansible.windows.win_regedit:
       path: HKLM:\System\Currentcontrolset\Services\Eventlog\Security
       name: WarningLevel
@@ -420,7 +420,7 @@
       - rule_18.4.12
       - patch
 
-- name: "SCORED | 18.5.4.1 | PATCH | (L1) Ensure 'Turn off multicast name resolution' is set to 'Enabled'"
+- name: "SCORED | 18.5.4.1 | PATCH | (L1) Ensure Turn off multicast name resolution is set to Enabled"
   ansible.windows.win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windows NT\DNSClient
       name: EnableMulticast
@@ -434,7 +434,7 @@
       - rule_18.5.4.1
       - patch
 
-- name: "SCORED | 18.5.5.1 | PATCH | (L2) Ensure 'Enable Font Providers' is set to 'Disabled'"
+- name: "SCORED | 18.5.5.1 | PATCH | (L2) Ensure Enable Font Providers is set to Disabled"
   ansible.windows.win_regedit:
       path: HKLM:\SOFTWARE\Policies\Microsoft\Windows\System
       name: EnableFontProviders
@@ -448,7 +448,7 @@
       - rule_18.5.5.1
       - patch
 
-- name: "SCORED | 18.5.8.1 | PATCH | (L1) Ensure 'Enable insecure guest logons' is set to 'Disabled'"
+- name: "SCORED | 18.5.8.1 | PATCH | (L1) Ensure Enable insecure guest logons is set to Disabled"
   ansible.windows.win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windows\Lanmanworkstation
       name: AllowInsecureGuestAuth
@@ -462,30 +462,30 @@
       - rule_18.5.8.1
       - patch
 
-- name: "SCORED | 18.5.9.1 | PATCH | (L2) Ensure 'Turn on Mapper I/O (LLTDIO) driver' is set to 'Disabled'"
+- name: "SCORED | 18.5.9.1 | PATCH | (L2) Ensure Turn on Mapper I/O (LLTDIO) driver is set to Disabled"
   block:
-      - name: "SCORED | 18.5.9.1 | PATCH | (L2) Ensure 'Turn on Mapper I/O (LLTDIO) driver' is set to 'Disabled' | AllowLLTDIOOndomain"
+      - name: "SCORED | 18.5.9.1 | PATCH | (L2) Ensure Turn on Mapper I/O (LLTDIO) driver is set to Disabled | AllowLLTDIOOndomain"
         ansible.windows.win_regedit:
             path: HKLM:\Software\Policies\Microsoft\Windows\Lltd
             name: AllowLLTDIOOndomain
             data: 0
             type: dword
 
-      - name: "SCORED | 18.5.9.1 | PATCH | (L2) Ensure 'Turn on Mapper I/O (LLTDIO) driver' is set to 'Disabled' | AllowLLTDIOOnPublicNet"
+      - name: "SCORED | 18.5.9.1 | PATCH | (L2) Ensure Turn on Mapper I/O (LLTDIO) driver is set to Disabled | AllowLLTDIOOnPublicNet"
         ansible.windows.win_regedit:
             path: HKLM:\Software\Policies\Microsoft\Windows\Lltd
             name: AllowLLTDIOOnPublicNet
             data: 0
             type: dword
 
-      - name: "SCORED | 18.5.9.1 | PATCH | (L2) Ensure 'Turn on Mapper I/O (LLTDIO) driver' is set to 'Disabled' | EnableLLTDIO"
+      - name: "SCORED | 18.5.9.1 | PATCH | (L2) Ensure Turn on Mapper I/O (LLTDIO) driver is set to Disabled | EnableLLTDIO"
         ansible.windows.win_regedit:
             path: HKLM:\Software\Policies\Microsoft\Windows\Lltd
             name: EnableLLTDIO
             data: 0
             type: dword
 
-      - name: "SCORED | 18.5.9.1 | PATCH | (L2) Ensure 'Turn on Mapper I/O (LLTDIO) driver' is set to 'Disabled' | ProhibitLLTDIOOnPrivateNet"
+      - name: "SCORED | 18.5.9.1 | PATCH | (L2) Ensure Turn on Mapper I/O (LLTDIO) driver is set to Disabled | ProhibitLLTDIOOnPrivateNet"
         ansible.windows.win_regedit:
             path: HKLM:\Software\Policies\Microsoft\Windows\Lltd
             name: ProhibitLLTDIOOnPrivateNet
@@ -499,30 +499,30 @@
       - rule_18.5.9.1
       - patch
 
-- name: "SCORED | 18.5.9.2 | PATCH | (L2) Ensure 'Turn on Responder (RSPNDR) driver' is set to 'Disabled'"
+- name: "SCORED | 18.5.9.2 | PATCH | (L2) Ensure Turn on Responder (RSPNDR) driver is set to Disabled"
   block:
-      - name: "SCORED | 18.5.9.2 | PATCH | (L2) Ensure 'Turn on Responder (RSPNDR) driver' is set to 'Disabled' | AllowRspndrOnDomain"
+      - name: "SCORED | 18.5.9.2 | PATCH | (L2) Ensure Turn on Responder (RSPNDR) driver is set to Disabled | AllowRspndrOnDomain"
         ansible.windows.win_regedit:
             path: HKLM:\Software\Policies\Microsoft\Windows\Lltd
             name: AllowRspndrOnDomain
             data: 0
             type: dword
 
-      - name: "SCORED | 18.5.9.2 | PATCH | (L2) Ensure 'Turn on Responder (RSPNDR) driver' is set to 'Disabled' | AllowRspndrOnPublicNet"
+      - name: "SCORED | 18.5.9.2 | PATCH | (L2) Ensure Turn on Responder (RSPNDR) driver is set to Disabled | AllowRspndrOnPublicNet"
         ansible.windows.win_regedit:
             path: HKLM:\Software\Policies\Microsoft\Windows\Lltd
             name: AllowRspndrOnPublicNet
             data: 0
             type: dword
 
-      - name: "SCORED | 18.5.9.2 | PATCH | (L2) Ensure 'Turn on Responder (RSPNDR) driver' is set to 'Disabled' | EnableRspndr"
+      - name: "SCORED | 18.5.9.2 | PATCH | (L2) Ensure Turn on Responder (RSPNDR) driver is set to Disabled | EnableRspndr"
         ansible.windows.win_regedit:
             path: HKLM:\Software\Policies\Microsoft\Windows\Lltd
             name: EnableRspndr
             data: 0
             type: dword
 
-      - name: "SCORED | 18.5.9.2 | PATCH | (L2) Ensure 'Turn on Responder (RSPNDR) driver' is set to 'Disabled' | ProhibitRspndrOnPrivateNet"
+      - name: "SCORED | 18.5.9.2 | PATCH | (L2) Ensure Turn on Responder (RSPNDR) driver is set to Disabled | ProhibitRspndrOnPrivateNet"
         ansible.windows.win_regedit:
             path: HKLM:\Software\Policies\Microsoft\Windows\Lltd
             name: ProhibitRspndrOnPrivateNet
@@ -536,7 +536,7 @@
       - rule_18.5.9.2
       - patch
 
-- name: "SCORED | 18.5.10.2 | PATCH | (L2) Ensure 'Turn off Microsoft Peer-to-Peer Networking Services' is set to 'Enabled'"
+- name: "SCORED | 18.5.10.2 | PATCH | (L2) Ensure Turn off Microsoft Peer-to-Peer Networking Services is set to Enabled"
   ansible.windows.win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Peernet
       name: Disabled
@@ -550,7 +550,7 @@
       - rule_18.5.10.2
       - patch
 
-- name: "SCORED | 18.5.11.2 | PATCH | (L1) Ensure 'Prohibit installation and configuration of Network Bridge on your DNS domain network' is set to 'Enabled'"
+- name: "SCORED | 18.5.11.2 | PATCH | (L1) Ensure Prohibit installation and configuration of Network Bridge on your DNS domain network is set to Enabled"
   ansible.windows.win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windows\Network Connections
       name: NC_AllowNetBridge_NLA
@@ -564,7 +564,7 @@
       - rule_18.5.11.2
       - patch
 
-- name: "SCORED | 18.5.11.3 | PATCH | (L1) Ensure 'Prohibit use of Internet Connection Sharing on your DNS domain network' is set to 'Enabled'"
+- name: "SCORED | 18.5.11.3 | PATCH | (L1) Ensure Prohibit use of Internet Connection Sharing on your DNS domain network is set to Enabled"
   ansible.windows.win_regedit:
       path: HKLM:\SOFTWARE\Policies\Microsoft\Windows\Network Connections
       name: NC_ShowSharedAccessUI
@@ -578,7 +578,7 @@
       - rule_18.5.11.3
       - patch
 
-- name: "SCORED | 18.5.11.4 | PATCH | (L1) Ensure 'Require domain users to elevate when setting a network's location' is set to 'Enabled'"
+- name: "SCORED | 18.5.11.4 | PATCH | (L1) Ensure Require domain users to elevate when setting a networks location is set to Enabled"
   ansible.windows.win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windows\Network Connections
       name: NC_StdDomainUserSetLocation
@@ -592,16 +592,16 @@
       - rule_18.5.11.4
       - patch
 
-- name: "SCORED | 18.5.14.1 | PATCH | (L1) Ensure 'Hardened UNC Paths' is set to 'Enabled, with Require Mutual Authentication and Require Integrity set for all NETLOGON and SYSVOL shares'"
+- name: "SCORED | 18.5.14.1 | PATCH | (L1) Ensure Hardened UNC Paths is set to Enabled, with Require Mutual Authentication and Require Integrity set for all NETLOGON and SYSVOL shares"
   block:
-      - name: "SCORED | 18.5.14.1 | PATCH | (L1) Ensure 'Hardened UNC Paths' is set to 'Enabled, with Require Mutual Authentication and Require Integrity set for all NETLOGON and SYSVOL shares' | Set NETLOGON"
+      - name: "SCORED | 18.5.14.1 | PATCH | (L1) Ensure Hardened UNC Paths is set to Enabled, with Require Mutual Authentication and Require Integrity set for all NETLOGON and SYSVOL shares | Set NETLOGON"
         ansible.windows.win_regedit:
             path: HKLM:\Software\Policies\Microsoft\Windows\Networkprovider\Hardenedpaths
             name: "\\\\*\\NETLOGON"
             data: "RequireMutualAuthentication=1, RequireIntegrity=1"
             type: string
 
-      - name: "SCORED | 18.5.14.1 | PATCH | (L1) Ensure 'Hardened UNC Paths' is set to 'Enabled, with Require Mutual Authentication and Require Integrity set for all NETLOGON and SYSVOL shares' | Set SYSVOL"
+      - name: "SCORED | 18.5.14.1 | PATCH | (L1) Ensure Hardened UNC Paths is set to Enabled, with Require Mutual Authentication and Require Integrity set for all NETLOGON and SYSVOL shares | Set SYSVOL"
         ansible.windows.win_regedit:
             path: HKLM:\Software\Policies\Microsoft\Windows\Networkprovider\Hardenedpaths
             name: "\\\\*\\SYSVOL"
@@ -615,7 +615,7 @@
       - rule_18.5.14.1
       - patch
 
-- name: "SCORED | 18.5.19.2.1 | PATCH | (L2) Disable IPv6 (Ensure TCPIP6 Parameter 'DisabledComponents' is set to '0xff (255)')"
+- name: "SCORED | 18.5.19.2.1 | PATCH | (L2) Disable IPv6 (Ensure TCPIP6 Parameter DisabledComponents is set to 0xff (255))"
   ansible.windows.win_regedit:
       path: HKLM:\System\CurrentControlSet\Services\TCPIP6\Parameters
       name: DisabledComponents
@@ -629,37 +629,37 @@
       - rule_18.5.19.2.1
       - patch
 
-- name: "SCORED | 18.5.20.1 | PATCH | (L2) Ensure 'Configuration of wireless settings using Windows Connect Now' is set to 'Disabled'"
+- name: "SCORED | 18.5.20.1 | PATCH | (L2) Ensure Configuration of wireless settings using Windows Connect Now is set to Disabled"
   block:
-      - name: "SCORED | 18.5.20.1 | PATCH | (L2) Ensure 'Configuration of wireless settings using Windows Connect Now' is set to 'Disabled' | EnableRegistrars"
+      - name: "SCORED | 18.5.20.1 | PATCH | (L2) Ensure Configuration of wireless settings using Windows Connect Now is set to Disabled | EnableRegistrars"
         ansible.windows.win_regedit:
             path: HKLM:\Software\Policies\Microsoft\Windows\Wcn\Registrars
             name: EnableRegistrars
             data: 0
             type: dword
 
-      - name: "SCORED | 18.5.20.1 | PATCH | (L2) Ensure 'Configuration of wireless settings using Windows Connect Now' is set to 'Disabled' | DisableUPnPRegistrar"
+      - name: "SCORED | 18.5.20.1 | PATCH | (L2) Ensure Configuration of wireless settings using Windows Connect Now is set to Disabled | DisableUPnPRegistrar"
         ansible.windows.win_regedit:
             path: HKLM:\Software\Policies\Microsoft\Windows\Wcn\Registrars
             name: DisableUPnPRegistrar
             data: 0
             type: dword
 
-      - name: "SCORED | 18.5.20.1 | PATCH | (L2) Ensure 'Configuration of wireless settings using Windows Connect Now' is set to 'Disabled' | DisableInBand802DOT11Registrar"
+      - name: "SCORED | 18.5.20.1 | PATCH | (L2) Ensure Configuration of wireless settings using Windows Connect Now is set to Disabled | DisableInBand802DOT11Registrar"
         ansible.windows.win_regedit:
             path: HKLM:\Software\Policies\Microsoft\Windows\Wcn\Registrars
             name: DisableInBand802DOT11Registrar
             data: 0
             type: dword
 
-      - name: "SCORED | 18.5.20.1 | PATCH | (L2) Ensure 'Configuration of wireless settings using Windows Connect Now' is set to 'Disabled' | DisableFlashConfigRegistrar"
+      - name: "SCORED | 18.5.20.1 | PATCH | (L2) Ensure Configuration of wireless settings using Windows Connect Now is set to Disabled | DisableFlashConfigRegistrar"
         ansible.windows.win_regedit:
             path: HKLM:\Software\Policies\Microsoft\Windows\Wcn\Registrars
             name: DisableFlashConfigRegistrar
             data: 0
             type: dword
 
-      - name: "SCORED | 18.5.20.1 | PATCH | (L2) Ensure 'Configuration of wireless settings using Windows Connect Now' is set to 'Disabled' | DisableWPDRegistrar"
+      - name: "SCORED | 18.5.20.1 | PATCH | (L2) Ensure Configuration of wireless settings using Windows Connect Now is set to Disabled | DisableWPDRegistrar"
         ansible.windows.win_regedit:
             path: HKLM:\Software\Policies\Microsoft\Windows\Wcn\Registrars
             name: DisableWPDRegistrar
@@ -673,7 +673,7 @@
       - rule_18.5.20.1
       - patch
 
-- name: "SCORED | 18.5.20.2 | PATCH | (L2) Ensure 'Prohibit access of the Windows Connect Now wizards' is set to 'Enabled'"
+- name: "SCORED | 18.5.20.2 | PATCH | (L2) Ensure Prohibit access of the Windows Connect Now wizards is set to Enabled"
   ansible.windows.win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windows\Wcn\Ui
       name: DisableWcnUi
@@ -687,7 +687,7 @@
       - rule_18.5.20.2
       - patch
 
-- name: "SCORED | 18.5.21.1 | PATCH | (L1) Ensure 'Minimize the number of simultaneous connections to the Internet or a Windows Domain' is set to 'Enabled: 1 = Minimize simultaneous connections'"
+- name: "SCORED | 18.5.21.1 | PATCH | (L1) Ensure Minimize the number of simultaneous connections to the Internet or a Windows Domain is set to Enabled: 1 = Minimize simultaneous connections"
   ansible.windows.win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windows\Wcmsvc\Grouppolicy
       name: fMinimizeConnections
@@ -701,7 +701,7 @@
       - rule_18.5.21.1
       - patch
 
-- name: "SCORED | 18.5.21.2 | PATCH | (L2) Ensure 'Prohibit connection to non-domain networks when connected to domain authenticated network' is set to 'Enabled' (MS only)"
+- name: "SCORED | 18.5.21.2 | PATCH | (L2) Ensure Prohibit connection to non-domain networks when connected to domain authenticated network is set to Enabled (MS only)"
   ansible.windows.win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windows\Wcmsvc\Grouppolicy
       name: fBlockNonDomain
@@ -715,7 +715,7 @@
       - rule_18.5.21.2
       - patch
 
-- name: "SCORED | 18.7.1.1 | PATCH | (L2) Ensure 'Turn off notifications network usage' is set to 'Enabled' (Scored)"
+- name: "SCORED | 18.7.1.1 | PATCH | (L2) Ensure Turn off notifications network usage is set to Enabled (Scored)"
   ansible.windows.win_regedit:
       path: HKLM:\SOFTWARE\Policies\Microsoft\Windows\CurrentVersion\PushNotifications
       name: NoCloudApplicationNotification
@@ -729,7 +729,7 @@
       - rule_18.7.1.1
       - patch
 
-- name: "SCORED | 18.8.3.1 | PATCH | (L1) Ensure 'Include command line in process creation events' is set to 'Disabled'"
+- name: "SCORED | 18.8.3.1 | PATCH | (L1) Ensure Include command line in process creation events is set to Disabled"
   ansible.windows.win_regedit:
       path: HKLM:\Software\Microsoft\Windows\Currentversion\Policies\System\Audit
       name: ProcessCreationIncludeCmdLine_Enabled
@@ -743,7 +743,7 @@
       - rule_18.8.3.1
       - patch
 
-- name: "SCORED | 18.8.4.1 | PATCH | (L1) Ensure 'Encryption Oracle Remediation' is set to 'Enabled: Force Updated Clients'"
+- name: "SCORED | 18.8.4.1 | PATCH | (L1) Ensure Encryption Oracle Remediation is set to Enabled: Force Updated Clients"
   ansible.windows.win_regedit:
       path: HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\CredSSP\Parameters
       name: AllowEncryptionOracle
@@ -757,7 +757,7 @@
       - rule_18.8.4.1
       - patch
 
-- name: "SCORED | 18.8.4.2 | PATCH | (L1) Ensure 'Remote host allows delegation of non-exportable credentials' is set to 'Enabled'"
+- name: "SCORED | 18.8.4.2 | PATCH | (L1) Ensure Remote host allows delegation of non-exportable credentials is set to Enabled"
   ansible.windows.win_regedit:
       path: HKLM:\SOFTWARE\Policies\Microsoft\Windows\CredentialsDelegation
       name: AllowProtectedCreds
@@ -771,7 +771,7 @@
       - rule_18.8.4.2
       - patch
 
-- name: "SCORED | 18.8.5.1 | PATCH | (NG) Ensure 'Turn On Virtualization Based Security' is set to 'Enabled'"
+- name: "SCORED | 18.8.5.1 | PATCH | (NG) Ensure Turn On Virtualization Based Security is set to Enabled"
   ansible.windows.win_regedit:
       path: HKLM:\SOFTWARE\Policies\Microsoft\Windows\DeviceGuard
       name: EnableVirtualizationBasedSecurity
@@ -786,7 +786,7 @@
       - rule_18.8.5.1
       - patch
 
-- name: "SCORED | 18.8.5.2 | PATCH | (NG) Ensure 'Turn On Virtualization Based Security: Select Platform Security Level' is set to 'Secure Boot and DMA Protection'"
+- name: "SCORED | 18.8.5.2 | PATCH | (NG) Ensure Turn On Virtualization Based Security: Select Platform Security Level is set to Secure Boot and DMA Protection"
   ansible.windows.win_regedit:
       path: HKLM:\SOFTWARE\Policies\Microsoft\Windows\DeviceGuard
       name: RequirePlatformSecurityFeatures
@@ -801,7 +801,7 @@
       - rule_18.8.5.2
       - patch
 
-- name: "SCORED | 18.8.5.3 | PATCH | (NG) Ensure 'Turn On Virtualization Based Security: Virtualization Based Protection of Code Integrity' is set to 'Enabled with UEFI lock'"
+- name: "SCORED | 18.8.5.3 | PATCH | (NG) Ensure Turn On Virtualization Based Security: Virtualization Based Protection of Code Integrity is set to Enabled with UEFI lock"
   ansible.windows.win_regedit:
       path: HKLM:\SOFTWARE\Policies\Microsoft\Windows\DeviceGuard
       name: HypervisorEnforcedCodeIntegrity
@@ -816,7 +816,7 @@
       - rule_18.8.5.3
       - patch
 
-- name: "SCORED | 18.8.5.4 | PATCH | (NG) Ensure 'Turn On Virtualization Based Security: Require UEFI Memory Attributes Table' is set to 'True (checked)'"
+- name: "SCORED | 18.8.5.4 | PATCH | (NG) Ensure Turn On Virtualization Based Security: Require UEFI Memory Attributes Table is set to True (checked)"
   ansible.windows.win_regedit:
       path: HKLM:\SOFTWARE\Policies\Microsoft\Windows\DeviceGuard
       name: HVCIMATRequired
@@ -831,7 +831,7 @@
       - rule_18.8.5.4
       - patch
 
-- name: "SCORED | 18.8.5.5 | PATCH | (NG) Ensure 'Turn On Virtualization Based Security: Credential Guard Configuration' is set to 'Enabled with UEFI lock' (MS Only)"
+- name: "SCORED | 18.8.5.5 | PATCH | (NG) Ensure Turn On Virtualization Based Security: Credential Guard Configuration is set to Enabled with UEFI lock (MS Only)"
   ansible.windows.win_regedit:
       path: HKLM:\SOFTWARE\Policies\Microsoft\Windows\DeviceGuard
       name: LsaCfgFlags
@@ -845,7 +845,7 @@
       - rule_18.8.5.5
       - patch
 
-- name: "SCORED | 18.8.5.6 | PATCH | (NG) Ensure 'Turn On Virtualization Based Security: Credential Guard Configuration' is set to 'Disabled' (DC Only)"
+- name: "SCORED | 18.8.5.6 | PATCH | (NG) Ensure Turn On Virtualization Based Security: Credential Guard Configuration is set to Disabled (DC Only)"
   ansible.windows.win_regedit:
       path: HKLM:\SOFTWARE\Policies\Microsoft\Windows\DeviceGuard
       name: LsaCfgFlags
@@ -859,7 +859,7 @@
       - rule_18.8.5.6
       - patch
 
-- name: "SCORED | 18.8.5.7 | PATCH | (NG) Ensure 'Turn On Virtualization Based Security: Secure Launch Configuration' is set to 'Enabled'"
+- name: "SCORED | 18.8.5.7 | PATCH | (NG) Ensure Turn On Virtualization Based Security: Secure Launch Configuration is set to Enabled"
   ansible.windows.win_regedit:
       path: HKLM:\SOFTWARE\Policies\Microsoft\Windows\DeviceGuard
       name: ConfigureSystemGuardLaunch
@@ -873,7 +873,7 @@
       - rule_18.8.5.7
       - patch
 
-- name: "SCORED | 18.8.14.1 | PATCH | (L1) Ensure 'Boot-Start Driver Initialization Policy' is set to 'Enabled: Good, unknown and bad but critical'"
+- name: "SCORED | 18.8.14.1 | PATCH | (L1) Ensure Boot-Start Driver Initialization Policy is set to Enabled: Good, unknown and bad but critical"
   ansible.windows.win_regedit:
       path: HKLM:\System\Currentcontrolset\Policies\Earlylaunch
       name: DriverLoadPolicy
@@ -887,7 +887,7 @@
       - rule_18.8.14.1
       - patch
 
-- name: "SCORED | 18.8.21.2 | PATCH | (L1) Ensure 'Configure registry policy processing: Do not apply during periodic background processing' is set to 'Enabled: FALSE'"
+- name: "SCORED | 18.8.21.2 | PATCH | (L1) Ensure Configure registry policy processing: Do not apply during periodic background processing is set to Enabled: FALSE"
   ansible.windows.win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windows\Group Policy\{35378Eac-683F-11D2-A89A-00C04Fbbcfa2}
       name: NoBackgroundPolicy
@@ -901,7 +901,7 @@
       - rule_18.8.21.2
       - patch
 
-- name: "SCORED | 18.8.21.3 | PATCH | (L1) Ensure 'Configure registry policy processing: Process even if the Group Policy objects have not changed' is set to 'Enabled: TRUE's"
+- name: "SCORED | 18.8.21.3 | PATCH | (L1) Ensure Configure registry policy processing: Process even if the Group Policy objects have not changed is set to Enabled: TRUEs"
   ansible.windows.win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windows\Group Policy\{35378Eac-683F-11D2-A89A-00C04Fbbcfa2}
       name: NoGPOListChanges
@@ -915,7 +915,7 @@
       - rule_18.8.21.3
       - patch
 
-- name: "SCORED | 18.8.21.4 | PATCH | (L1) Ensure 'Continue experiences on this device' is set to 'Disabled'"
+- name: "SCORED | 18.8.21.4 | PATCH | (L1) Ensure Continue experiences on this device is set to Disabled"
   ansible.windows.win_regedit:
       path: HKLM:\SOFTWARE\Policies\Microsoft\Windows\System
       name: EnableCdp
@@ -929,7 +929,7 @@
       - rule_18.8.21.4
       - patch
 
-- name: "SCORED | 18.8.21.5 | PATCH | (L1) Ensure 'Turn off background refresh of Group Policy' is set to 'Disabled'"
+- name: "SCORED | 18.8.21.5 | PATCH | (L1) Ensure Turn off background refresh of Group Policy is set to Disabled"
   ansible.windows.win_regedit:
       path: HKLM:\Software\Microsoft\Windows\Currentversion\Policies\System
       name: DisableBkGndGroupPolicy
@@ -943,7 +943,7 @@
       - rule_18.8.21.5
       - patch
 
-- name: "SCORED | 18.8.22.1.1 | PATCH | (L1) Ensure 'Turn off downloading of print drivers over HTTP' is set to 'Enabled'"
+- name: "SCORED | 18.8.22.1.1 | PATCH | (L1) Ensure Turn off downloading of print drivers over HTTP is set to Enabled"
   ansible.windows.win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windows Nt\Printers
       name: DisableWebPnPDownload
@@ -957,7 +957,7 @@
       - rule_18.8.22.1.1
       - patch
 
-- name: "SCORED | 18.8.22.1.2 | PATCH | (L2) Ensure 'Turn off handwriting personalization data sharing' is set to 'Enabled'"
+- name: "SCORED | 18.8.22.1.2 | PATCH | (L2) Ensure Turn off handwriting personalization data sharing is set to Enabled"
   ansible.windows.win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windows\Tabletpc
       name: PreventHandwritingDataSharing
@@ -971,7 +971,7 @@
       - rule_18.8.22.1.2
       - patch
 
-- name: "SCORED | 18.8.22.1.3 | PATCH | (L2) Ensure 'Turn off handwriting recognition error reporting' is set to 'Enabled'"
+- name: "SCORED | 18.8.22.1.3 | PATCH | (L2) Ensure Turn off handwriting recognition error reporting is set to Enabled"
   ansible.windows.win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windows\Handwritingerrorreports
       name: PreventHandwritingErrorReports
@@ -985,7 +985,7 @@
       - rule_18.8.22.1.3
       - patch
 
-- name: "SCORED | 18.8.22.1.4 | PATCH | (L2) Ensure 'Turn off Internet Connection Wizard if URL connection is referring to Microsoft.com' is set to 'Enabled'"
+- name: "SCORED | 18.8.22.1.4 | PATCH | (L2) Ensure Turn off Internet Connection Wizard if URL connection is referring to Microsoft.com is set to Enabled"
   ansible.windows.win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windows\Internet Connection Wizard
       name: ExitOnMSICW
@@ -999,7 +999,7 @@
       - rule_18.8.22.1.4
       - patch
 
-- name: "SCORED | 18.8.22.1.5 | PATCH | (L1) Ensure 'Turn off Internet download for Web publishing and online ordering wizards' is set to 'Enabled'"
+- name: "SCORED | 18.8.22.1.5 | PATCH | (L1) Ensure Turn off Internet download for Web publishing and online ordering wizards is set to Enabled"
   ansible.windows.win_regedit:
       path: HKLM:\Software\Microsoft\Windows\Currentversion\Policies\Explorer
       name: NoWebServices
@@ -1013,7 +1013,7 @@
       - rule_18.8.22.1.5
       - patch
 
-- name: "SCORED | 18.8.22.1.6 | PATCH | (L2) Ensure 'Turn off printing over HTTP' is set to 'Enabled'"
+- name: "SCORED | 18.8.22.1.6 | PATCH | (L2) Ensure Turn off printing over HTTP is set to Enabled"
   ansible.windows.win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windows Nt\Printers
       name: DisableHTTPPrinting
@@ -1027,7 +1027,7 @@
       - rule_18.8.22.1.6
       - patch
 
-- name: "SCORED | 18.8.22.1.7 | PATCH | (L2) Ensure 'Turn off Registration if URL connection is referring to Microsoft.com' is set to 'Enabled'"
+- name: "SCORED | 18.8.22.1.7 | PATCH | (L2) Ensure Turn off Registration if URL connection is referring to Microsoft.com is set to Enabled"
   ansible.windows.win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windows\Registration Wizard Control
       name: NoRegistration
@@ -1041,7 +1041,7 @@
       - rule_18.8.22.1.7
       - patch
 
-- name: "SCORED |18.8.22.1.8 | PATCH | (L2) Ensure 'Turn off Search Companion content file updates' is set to 'Enabled'"
+- name: "SCORED |18.8.22.1.8 | PATCH | (L2) Ensure Turn off Search Companion content file updates is set to Enabled"
   ansible.windows.win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Searchcompanion
       name: DisableContentFileUpdates
@@ -1055,7 +1055,7 @@
       - rule_18.8.22.1.8
       - patch
 
-- name: "SCORED | 18.8.22.1.9 | PATCH | (L2) Ensure 'Turn off the Order Prints picture task' is set to 'Enabled'"
+- name: "SCORED | 18.8.22.1.9 | PATCH | (L2) Ensure Turn off the Order Prints picture task is set to Enabled"
   ansible.windows.win_regedit:
       path: HKLM:\Software\Microsoft\Windows\Currentversion\Policies\Explorer
       name: NoOnlinePrintsWizard
@@ -1069,7 +1069,7 @@
       - rule_18.8.22.1.9
       - patch
 
-- name: "SCORED | 18.8.22.1.10 | PATCH | (L2) Ensure 'Turn off the Publish to Web task for files and folders' is set to 'Enabled'"
+- name: "SCORED | 18.8.22.1.10 | PATCH | (L2) Ensure Turn off the Publish to Web task for files and folders is set to Enabled"
   ansible.windows.win_regedit:
       path: HKLM:\Software\Microsoft\Windows\Currentversion\Policies\Explorer
       name: NoPublishingWizard
@@ -1083,7 +1083,7 @@
       - rule_18.8.22.1.10
       - patch
 
-- name: "SCORED | 18.8.22.1.11 | PATCH | (L2) Ensure 'Turn off the Windows Messenger Customer Experience Improvement Program' is set to 'Enabled'"
+- name: "SCORED | 18.8.22.1.11 | PATCH | (L2) Ensure Turn off the Windows Messenger Customer Experience Improvement Program is set to Enabled"
   ansible.windows.win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Messenger\Client
       name: CEIP
@@ -1097,7 +1097,7 @@
       - rule_18.8.22.1.11
       - patch
 
-- name: "SCORED | 18.8.22.1.12 | PATCH | (L2) Ensure 'Turn off Windows Customer Experience Improvement Program' is set to 'Enabled'"
+- name: "SCORED | 18.8.22.1.12 | PATCH | (L2) Ensure Turn off Windows Customer Experience Improvement Program is set to Enabled"
   ansible.windows.win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Sqmclient\Windows
       name: CEIPEnable
@@ -1111,16 +1111,16 @@
       - rule_18.8.22.1.12
       - patch
 
-- name: "SCORED | 18.8.22.1.13 | PATCH | (L2) Ensure 'Turn off Windows Error Reporting' is set to 'Enabled'"
+- name: "SCORED | 18.8.22.1.13 | PATCH | (L2) Ensure Turn off Windows Error Reporting is set to Enabled"
   block:
-      - name: "SCORED | 18.8.22.1.13 | PATCH | (L2) Ensure 'Turn off Windows Error Reporting' is set to 'Enabled' | Windows Error Reporting"
+      - name: "SCORED | 18.8.22.1.13 | PATCH | (L2) Ensure Turn off Windows Error Reporting is set to Enabled | Windows Error Reporting"
         ansible.windows.win_regedit:
             path: HKLM:\Software\Policies\Microsoft\Windows\Windows Error Reporting
             name: Disabled
             data: 1
             type: dword
 
-      - name: "SCORED | 18.8.22.1.13 | PATCH | (L2) Ensure 'Turn off Windows Error Reporting' is set to 'Enabled' | ErrorReporting"
+      - name: "SCORED | 18.8.22.1.13 | PATCH | (L2) Ensure Turn off Windows Error Reporting is set to Enabled | ErrorReporting"
         ansible.windows.win_regedit:
             path: HKLM:\SOFTWARE\Policies\Microsoft\PCHealth\ErrorReporting
             name: DoReport
@@ -1134,16 +1134,16 @@
       - rule_18.8.22.1.13
       - patch
 
-- name: "SCORED | 18.8.25.1 | PATCH | (L2) Ensure 'Support device authentication using certificate' is set to 'Enabled: Automatic'"
+- name: "SCORED | 18.8.25.1 | PATCH | (L2) Ensure Support device authentication using certificate is set to Enabled: Automatic"
   block:
-      - name: "SCORED | 18.8.25.1 | PATCH | (L2) Ensure 'Support device authentication using certificate' is set to 'Enabled: Automatic' | DevicePKInitBehavior"
+      - name: "SCORED | 18.8.25.1 | PATCH | (L2) Ensure Support device authentication using certificate is set to Enabled: Automatic | DevicePKInitBehavior"
         ansible.windows.win_regedit:
             path: HKLM:\Software\Microsoft\Windows\CurrentVersion\Policies\System\kerberos\parameters
             name: DevicePKInitBehavior
             data: 0
             type: dword
 
-      - name: "SCORED | 18.8.25.1 | PATCH | (L2) Ensure 'Support device authentication using certificate' is set to 'Enabled: Automatic' | DevicePKInitEnabled"
+      - name: "SCORED | 18.8.25.1 | PATCH | (L2) Ensure Support device authentication using certificate is set to Enabled: Automatic | DevicePKInitEnabled"
         ansible.windows.win_regedit:
             path: HKLM:\Software\Microsoft\Windows\CurrentVersion\Policies\System\kerberos\parameters
             name: DevicePKInitEnabled
@@ -1157,7 +1157,7 @@
       - rule_18.8.25.1
       - patch
 
-- name: "SCORED | 18.8.27.1 | PATCH | (L2) Ensure 'Disallow copying of user input methods to the system account for sign-in' is set to 'Enabled'"
+- name: "SCORED | 18.8.27.1 | PATCH | (L2) Ensure Disallow copying of user input methods to the system account for sign-in is set to Enabled"
   ansible.windows.win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Control Panel\International
       name: BlockUserInputMethodsForSignIn
@@ -1171,7 +1171,7 @@
       - rule_18.8.27.1
       - patch
 
-- name: "SCORED | 18.8.28.1 | PATCH | (L1) Ensure 'Block user from showing account details on sign-in' is set to 'Enabled'"
+- name: "SCORED | 18.8.28.1 | PATCH | (L1) Ensure Block user from showing account details on sign-in is set to Enabled"
   ansible.windows.win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windows\System
       name: BlockUserFromShowingAccountDetailsOnSignin
@@ -1185,7 +1185,7 @@
       - rule_18.8.28.1
       - patch
 
-- name: "SCORED | 18.8.28.2 | PATCH | (L1) Ensure 'Do not display network selection UI' is set to 'Enabled'"
+- name: "SCORED | 18.8.28.2 | PATCH | (L1) Ensure Do not display network selection UI is set to Enabled"
   ansible.windows.win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windows\System
       name: DontDisplayNetworkSelectionUI
@@ -1199,7 +1199,7 @@
       - rule_18.8.28.2
       - patch
 
-- name: "SCORED | 18.8.28.3 | PATCH | (L1) Ensure 'Do not enumerate connected users on domain-joined computers' is set to 'Enabled'"
+- name: "SCORED | 18.8.28.3 | PATCH | (L1) Ensure Do not enumerate connected users on domain-joined computers is set to Enabled"
   ansible.windows.win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windows\System
       name: DontEnumerateConnectedUsers
@@ -1213,7 +1213,7 @@
       - rule_18.8.28.3
       - patch
 
-- name: "SCORED | 18.8.28.4 | PATCH | (L1) Ensure 'Enumerate local users on domain-joined computers' is set to 'Disabled' (MS only)"
+- name: "SCORED | 18.8.28.4 | PATCH | (L1) Ensure Enumerate local users on domain-joined computers is set to Disabled (MS only)"
   ansible.windows.win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windows\System
       name: EnumerateLocalUsers
@@ -1227,7 +1227,7 @@
       - rule_18.8.28.4
       - patch
 
-- name: "SCORED | 18.8.28.5 | PATCH | (L1) Ensure 'Turn off app notifications on the lock screen' is set to 'Enabled'"
+- name: "SCORED | 18.8.28.5 | PATCH | (L1) Ensure Turn off app notifications on the lock screen is set to Enabled"
   ansible.windows.win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windows\System
       name: DisableLockScreenAppNotifications
@@ -1241,7 +1241,7 @@
       - rule_18.8.28.5
       - patch
 
-- name: "SCORED | 18.8.28.6 | PATCH | (L1) Ensure 'Turn off picture password sign-in' is set to 'Enabled'"
+- name: "SCORED | 18.8.28.6 | PATCH | (L1) Ensure Turn off picture password sign-in is set to Enabled"
   ansible.windows.win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windows\System
       name: BlockDomainPicturePassword
@@ -1255,7 +1255,7 @@
       - rule_18.8.28.6
       - patch
 
-- name: "SCORED | 18.8.28.7 | PATCH | (L1) Ensure 'Turn on convenience PIN sign-in' is set to 'Disabled'"
+- name: "SCORED | 18.8.28.7 | PATCH | (L1) Ensure Turn on convenience PIN sign-in is set to Disabled"
   ansible.windows.win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windows\System
       name: AllowDomainPINLogon
@@ -1269,7 +1269,7 @@
       - rule_18.8.28.7
       - patch
 
-- name: "SCORED | 18.8.34.6.1 | PATCH | (L2) Ensure 'Allow network connectivity during connected-standby (on battery)' is set to 'Disabled'"
+- name: "SCORED | 18.8.34.6.1 | PATCH | (L2) Ensure Allow network connectivity during connected-standby (on battery) is set to Disabled"
   ansible.windows.win_regedit:
       path: HKLM:\SOFTWARE\Policies\Microsoft\Power\PowerSettings\f15576e8-98b7-4186-b944-eafa664402d9
       name: DCSettingIndex
@@ -1283,7 +1283,7 @@
       - rule_18.8.34.6.1
       - patch
 
-- name: "SCORED | 18.8.34.6.2 | PATCH | (L2) Ensure 'Allow network connectivity during connected-standby (plugged in)' is set to 'Disabled'"
+- name: "SCORED | 18.8.34.6.2 | PATCH | (L2) Ensure Allow network connectivity during connected-standby (plugged in) is set to Disabled"
   ansible.windows.win_regedit:
       path: HKLM:\SOFTWARE\Policies\Microsoft\Power\PowerSettings\f15576e8-98b7-4186-b944-eafa664402d9
       name: ACSettingIndex
@@ -1297,7 +1297,7 @@
       - rule_18.8.34.6.2
       - patch
 
-- name: "SCORED | 18.8.34.6.3 | PATCH | (L1) Ensure 'Require a password when a computer wakes (on battery)' is set to 'Enabled'"
+- name: "SCORED | 18.8.34.6.3 | PATCH | (L1) Ensure Require a password when a computer wakes (on battery) is set to Enabled"
   ansible.windows.win_regedit:
       path: HKLM:\SOFTWARE\Policies\Microsoft\Power\PowerSettings\0e796bdb-100d-47d6-a2d5-f7d2daa51f51
       name: DCSettingIndex
@@ -1311,7 +1311,7 @@
       - rule_18.8.34.6.3
       - patch
 
-- name: "SCORED | 18.8.34.6.4 | PATCH | (L1) Ensure 'Require a password when a computer wakes (plugged in)' is set to 'Enabled'"
+- name: "SCORED | 18.8.34.6.4 | PATCH | (L1) Ensure Require a password when a computer wakes (plugged in) is set to Enabled"
   ansible.windows.win_regedit:
       path: HKLM:\SOFTWARE\Policies\Microsoft\Power\PowerSettings\0e796bdb-100d-47d6-a2d5-f7d2daa51f51
       name: ACSettingIndex
@@ -1325,7 +1325,7 @@
       - rule_18.8.34.6.4
       - patch
 
-- name: "SCORED | 18.8.36.1 | PATCH | (L1) Ensure 'Configure Offer Remote Assistance' is set to 'Disabled'"
+- name: "SCORED | 18.8.36.1 | PATCH | (L1) Ensure Configure Offer Remote Assistance is set to Disabled"
   ansible.windows.win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windows Nt\Terminal Services
       name: fAllowUnsolicited
@@ -1339,7 +1339,7 @@
       - rule_18.8.36.1
       - patch
 
-- name: "SCORED | 18.8.36.2 | PATCH | (L1) Ensure 'Configure Solicited Remote Assistance' is set to 'Disabled'"
+- name: "SCORED | 18.8.36.2 | PATCH | (L1) Ensure Configure Solicited Remote Assistance is set to Disabled"
   ansible.windows.win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windows Nt\Terminal Services
       name: fAllowToGetHelp
@@ -1353,7 +1353,7 @@
       - rule_18.8.36.2
       - patch
 
-- name: "SCORED | 18.8.37.1 | PATCH | (L1) Ensure 'Enable RPC Endpoint Mapper Client Authentication' is set to 'Enabled' (MS only)"
+- name: "SCORED | 18.8.37.1 | PATCH | (L1) Ensure Enable RPC Endpoint Mapper Client Authentication is set to Enabled (MS only)"
   ansible.windows.win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windows Nt\Rpc
       name: EnableAuthEpResolution
@@ -1367,7 +1367,7 @@
       - rule_18.8.37.1
       - patch
 
-- name: "SCORED | 18.8.37.2 | PATCH | (L2) Ensure 'Restrict Unauthenticated RPC clients' is set to 'Enabled: Authenticated' (MS only)"
+- name: "SCORED | 18.8.37.2 | PATCH | (L2) Ensure Restrict Unauthenticated RPC clients is set to Enabled: Authenticated (MS only)"
   ansible.windows.win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windows Nt\Rpc
       name: RestrictRemoteClients
@@ -1381,7 +1381,7 @@
       - rule_18.8.37.2
       - patch
 
-- name: "SCORED | 18.8.47.5.1 | PATCH | (L2) Ensure 'Microsoft Support Diagnostic Tool: Turn on MSDT interactive communication with support provider' is set to 'Disabled'"
+- name: "SCORED | 18.8.47.5.1 | PATCH | (L2) Ensure Microsoft Support Diagnostic Tool: Turn on MSDT interactive communication with support provider is set to Disabled"
   ansible.windows.win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windows\Scripteddiagnosticsprovider\Policy
       name: DisableQueryRemoteServer
@@ -1395,7 +1395,7 @@
       - rule_18.8.47.5.1
       - patch
 
-- name: "SCORED | 18.8.47.11.1 | PATCH |(L2) Ensure 'Enable/Disable PerfTrack' is set to 'Disabled'"
+- name: "SCORED | 18.8.47.11.1 | PATCH |(L2) Ensure Enable/Disable PerfTrack is set to Disabled"
   ansible.windows.win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windows\Wdi\{9C5A40Da-B965-4Fc3-8781-88Dd50A6299D}
       name: ScenarioExecutionEnabled
@@ -1409,7 +1409,7 @@
       - rule_18.8.47.11.1
       - patch
 
-- name: "SCORED | 18.8.49.1 | PATCH | (L2) Ensure 'Turn off the advertising ID' is set to 'Enabled'"
+- name: "SCORED | 18.8.49.1 | PATCH | (L2) Ensure Turn off the advertising ID is set to Enabled"
   ansible.windows.win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windows\Advertisinginfo
       name: DisabledByGroupPolicy
@@ -1423,7 +1423,7 @@
       - rule_18.8.49.1
       - patch
 
-- name: "SCORED | 18.8.52.1.1 | PATCH | (L2) Ensure 'Enable Windows NTP Client' is set to 'Enabled'"
+- name: "SCORED | 18.8.52.1.1 | PATCH | (L2) Ensure Enable Windows NTP Client is set to Enabled"
   ansible.windows.win_regedit:
       path: HKLM:\Software\Policies\Microsoft\W32Time\Timeproviders\Ntpclient
       name: Enabled
@@ -1437,7 +1437,7 @@
       - rule_18.8.52.1.1
       - patch
 
-- name: "SCORED | 18.8.52.1.2 | PATCH | (L2) Ensure 'Enable Windows NTP Server' is set to 'Disabled' (MS only)"
+- name: "SCORED | 18.8.52.1.2 | PATCH | (L2) Ensure Enable Windows NTP Server is set to Disabled (MS only)"
   ansible.windows.win_regedit:
       path: HKLM:\Software\Policies\Microsoft\W32Time\Timeproviders\Ntpserver
       name: Enabled
@@ -1451,7 +1451,7 @@
       - rule_18.8.52.1.2
       - patch
 
-- name: "SCORED | 18.9.4.1 | PATCH | (L2) Ensure 'Allow a Windows app to share application data between users' is set to 'Disabled'"
+- name: "SCORED | 18.9.4.1 | PATCH | (L2) Ensure Allow a Windows app to share application data between users is set to Disabled"
   ansible.windows.win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windows\Currentversion\Appmodel\Statemanager
       name: AllowSharedLocalAppData
@@ -1465,7 +1465,7 @@
       - rule_18.9.4.1
       - patch
 
-- name: "SCORED | 18.9.6.1 | PATCH | (L1) Ensure 'Allow Microsoft accounts to be optional' is set to 'Enabled'"
+- name: "SCORED | 18.9.6.1 | PATCH | (L1) Ensure Allow Microsoft accounts to be optional is set to Enabled"
   ansible.windows.win_regedit:
       path: HKLM:\Software\Microsoft\Windows\Currentversion\Policies\System
       name: MSAOptional
@@ -1479,7 +1479,7 @@
       - rule_18.9.6.1
       - patch
 
-- name: "SCORED | 18.9.8.1 | PATCH | (L1) Ensure 'Disallow Autoplay for non-volume devices' is set to 'Enabled'"
+- name: "SCORED | 18.9.8.1 | PATCH | (L1) Ensure Disallow Autoplay for non-volume devices is set to Enabled"
   ansible.windows.win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windows\Explorer
       name: NoAutoplayfornonVolume
@@ -1493,7 +1493,7 @@
       - rule_18.9.8.1
       - patch
 
-- name: "SCORED | 18.9.8.2 | PATCH | (L1) Ensure 'Set the default behavior for AutoRun' is set to 'Enabled: Do not execute any autorun commands'"
+- name: "SCORED | 18.9.8.2 | PATCH | (L1) Ensure Set the default behavior for AutoRun is set to Enabled: Do not execute any autorun commands"
   ansible.windows.win_regedit:
       path: HKLM:\Software\Microsoft\Windows\Currentversion\Policies\Explorer
       name: NoAutorun
@@ -1507,7 +1507,7 @@
       - rule_18.9.8.2
       - patch
 
-- name: "SCORED | 18.9.8.3 | PATCH | (L1) Ensure 'Turn off Autoplay' is set to 'Enabled: All drives'"
+- name: "SCORED | 18.9.8.3 | PATCH | (L1) Ensure Turn off Autoplay is set to Enabled: All drives"
   ansible.windows.win_regedit:
       path: HKLM:\Software\Microsoft\Windows\Currentversion\Policies\Explorer
       name: NoDriveTypeAutoRun
@@ -1521,7 +1521,7 @@
       - rule_18.9.8.3
       - patch
 
-- name: "SCORED | 18.9.10.1.1 | PATCH | (L1) Ensure 'Configure enhanced anti-spoofing' is set to 'Enabled'"
+- name: "SCORED | 18.9.10.1.1 | PATCH | (L1) Ensure Configure enhanced anti-spoofing is set to Enabled"
   ansible.windows.win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Biometrics\Facialfeatures
       name: EnhancedAntiSpoofing
@@ -1535,7 +1535,7 @@
       - rule_18.9.10.1.1
       - patch
 
-- name: "SCORED | 18.9.12.1 | PATCH | (L2) Ensure 'Allow Use of Camera' is set to 'Disabled's"
+- name: "SCORED | 18.9.12.1 | PATCH | (L2) Ensure Allow Use of Camera is set to Disableds"
   ansible.windows.win_regedit:
       path: HKLM:\SOFTWARE\Policies\Microsoft\Camera
       name: AllowCamera
@@ -1549,7 +1549,7 @@
       - rule_18.9.12.1
       - patch
 
-- name: "SCORED | 18.9.13.1 | PATCH | (L1) Ensure 'Turn off Microsoft consumer experiences' is set to 'Enabled'"
+- name: "SCORED | 18.9.13.1 | PATCH | (L1) Ensure Turn off Microsoft consumer experiences is set to Enabled"
   ansible.windows.win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windows\Cloudcontent
       name: DisableWindowsConsumerFeatures
@@ -1563,7 +1563,7 @@
       - rule_18.9.13.1
       - patch
 
-- name: "SCORED | 18.9.14.1 | PATCH | (L1) Ensure 'Require pin for pairing' is set to 'Enabled: First Time' OR 'Enabled: Always'"
+- name: "SCORED | 18.9.14.1 | PATCH | (L1) Ensure Require pin for pairing is set to Enabled: First Time OR Enabled: Always"
   ansible.windows.win_regedit:
       path: HKLM:\SOFTWARE\Policies\Microsoft\Windows\Connect
       name: RequirePinForPairing
@@ -1577,7 +1577,7 @@
       - rule_18.9.14.1
       - patch
 
-- name: "SCORED | 18.9.15.1 | PATCH | (L1) Ensure 'Do not display the password reveal button' is set to 'Enabled'"
+- name: "SCORED | 18.9.15.1 | PATCH | (L1) Ensure Do not display the password reveal button is set to Enabled"
   ansible.windows.win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windows\Credui
       name: DisablePasswordReveal
@@ -1591,7 +1591,7 @@
       - rule_18.9.15.1
       - patch
 
-- name: "SCORED | 18.9.15.2 | PATCH | (L1) Ensure 'Enumerate administrator accounts on elevation' is set to 'Disabled'"
+- name: "SCORED | 18.9.15.2 | PATCH | (L1) Ensure Enumerate administrator accounts on elevation is set to Disabled"
   ansible.windows.win_regedit:
       path: HKLM:\Software\Microsoft\Windows\Currentversion\Policies\Credui
       name: EnumerateAdministrators
@@ -1605,7 +1605,7 @@
       - rule_18.9.15.2
       - patch
 
-- name: "SCORED | 18.9.16.1 | PATCH | (L1) Ensure 'Allow Telemetry' is set to 'Enabled: 0 - Security [Enterprise Only]' or 'Enabled: 1 - Basic'"
+- name: "SCORED | 18.9.16.1 | PATCH | (L1) Ensure Allow Telemetry is set to Enabled: 0 - Security [Enterprise Only] or Enabled: 1 - Basic"
   ansible.windows.win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windows\Datacollection
       name: AllowTelemetry
@@ -1619,7 +1619,7 @@
       - rule_18.9.16.1
       - patch
 
-- name: "SCORED | 18.9.16.2 | PATCH | (L2) Ensure 'Configure Authenticated Proxy usage for the Connected User Experience and Telemetry service' is set to 'Enabled: Disable Authenticated Proxy usage'"
+- name: "SCORED | 18.9.16.2 | PATCH | (L2) Ensure Configure Authenticated Proxy usage for the Connected User Experience and Telemetry service is set to Enabled: Disable Authenticated Proxy usage"
   ansible.windows.win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windows\Datacollection
       name: DisableEnterpriseAuthProxy
@@ -1633,7 +1633,7 @@
       - rule_18.9.16.2
       - patch
 
-- name: "SCORED | 18.9.16.3 | PATCH | (L1) Ensure 'Do not show feedback notifications' is set to 'Enabled'"
+- name: "SCORED | 18.9.16.3 | PATCH | (L1) Ensure Do not show feedback notifications is set to Enabled"
   ansible.windows.win_regedit:
       path: HKLM:\SOFTWARE\Policies\Microsoft\Windows\DataCollection
       name: DoNotShowFeedbackNotifications
@@ -1647,7 +1647,7 @@
       - rule_18.9.16.3
       - patch
 
-- name: "SCORED | 18.9.16.4 | PATCH | (L1) Ensure 'Toggle user control over Insider builds' is set to 'Disabled'"
+- name: "SCORED | 18.9.16.4 | PATCH | (L1) Ensure Toggle user control over Insider builds is set to Disabled"
   ansible.windows.win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windows\Previewbuilds
       name: AllowBuildPreview
@@ -1661,7 +1661,7 @@
       - rule_18.9.16.4
       - patch
 
-- name: "SCORED | 18.9.26.1.1 | PATCH | (L1) Ensure 'Application: Control Event Log behavior when the log file reaches its maximum size' is set to 'Disabled'"
+- name: "SCORED | 18.9.26.1.1 | PATCH | (L1) Ensure Application: Control Event Log behavior when the log file reaches its maximum size is set to Disabled"
   ansible.windows.win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windows\EventLog\Application
       name: Retention
@@ -1675,7 +1675,7 @@
       - rule_18.9.26.1.1
       - patch
 
-- name: "SCORED | 18.9.26.1.2 | PATCH | (L1) Ensure 'Application: Specify the maximum log file size (KB)' is set to 'Enabled: 32,768 or greater'"
+- name: "SCORED | 18.9.26.1.2 | PATCH | (L1) Ensure Application: Specify the maximum log file size (KB) is set to Enabled: 32,768 or greater"
   ansible.windows.win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windows\Eventlog\Application
       name: MaxSize
@@ -1689,7 +1689,7 @@
       - rule_18.9.26.1.2
       - patch
 
-- name: "SCORED | 18.9.26.2.1 | PATCH | (L1) Ensure 'Security: Control Event Log behavior when the log file reaches its maximum size' is set to 'Disabled'"
+- name: "SCORED | 18.9.26.2.1 | PATCH | (L1) Ensure Security: Control Event Log behavior when the log file reaches its maximum size is set to Disabled"
   ansible.windows.win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windows\Eventlog\Security
       name: Retention
@@ -1703,7 +1703,7 @@
       - rule_18.9.26.2.1
       - patch
 
-- name: "SCORED | 18.9.26.2.2 | PATCH | (L1) Ensure 'Security: Specify the maximum log file size (KB)' is set to 'Enabled: 196,608 or greater'"
+- name: "SCORED | 18.9.26.2.2 | PATCH | (L1) Ensure Security: Specify the maximum log file size (KB) is set to Enabled: 196,608 or greater"
   ansible.windows.win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windows\Eventlog\Security
       name: MaxSize
@@ -1717,7 +1717,7 @@
       - rule_18.9.26.2.2
       - patch
 
-- name: "SCORED | 18.9.26.3.1 | PATCH | (L1) Ensure 'Setup: Control Event Log behavior when the log file reaches its maximum size' is set to 'Disabled'"
+- name: "SCORED | 18.9.26.3.1 | PATCH | (L1) Ensure Setup: Control Event Log behavior when the log file reaches its maximum size is set to Disabled"
   ansible.windows.win_regedit:
       path: HKLM:\SOFTWARE\Policies\Microsoft\Windows\EventLog\Setup
       name: Retention
@@ -1731,7 +1731,7 @@
       - rule_18.9.26.3.1
       - patch
 
-- name: "SCORED | 18.9.26.3.2 | PATCH | (L1) Ensure 'Setup: Specify the maximum log file size (KB)' is set to 'Enabled: 32,768 or greater'"
+- name: "SCORED | 18.9.26.3.2 | PATCH | (L1) Ensure Setup: Specify the maximum log file size (KB) is set to Enabled: 32,768 or greater"
   ansible.windows.win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windows\Eventlog\Setup
       name: MaxSize
@@ -1745,7 +1745,7 @@
       - rule_18.9.26.3.2
       - patch
 
-- name: "SCORED | 18.9.26.4.1 | PATCH | (L1) Ensure 'System: Control Event Log behavior when the log file reaches its maximum size' is set to 'Disabled'"
+- name: "SCORED | 18.9.26.4.1 | PATCH | (L1) Ensure System: Control Event Log behavior when the log file reaches its maximum size is set to Disabled"
   ansible.windows.win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windows\Eventlog\System
       name: Retention
@@ -1759,7 +1759,7 @@
       - rule_18.9.26.4.1
       - patch
 
-- name: "SCORED | 18.9.26.4.2 | PATCH | (L1) Ensure 'System: Specify the maximum log file size (KB)' is set to 'Enabled: 32,768 or greater'"
+- name: "SCORED | 18.9.26.4.2 | PATCH | (L1) Ensure System: Specify the maximum log file size (KB) is set to Enabled: 32,768 or greater"
   ansible.windows.win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windows\Eventlog\System
       name: MaxSize
@@ -1773,7 +1773,7 @@
       - rule_18.9.26.4.2
       - patch
 
-- name: "SCORED | 18.9.30.2 | PATCH | (L1) Ensure 'Turn off Data Execution Prevention for Explorer' is set to 'Disabled'"
+- name: "SCORED | 18.9.30.2 | PATCH | (L1) Ensure Turn off Data Execution Prevention for Explorer is set to Disabled"
   ansible.windows.win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windows\Explorer
       name: NoDataExecutionPrevention
@@ -1787,7 +1787,7 @@
       - rule_18.9.30.2
       - patch
 
-- name: "SCORED | 18.9.30.3 | PATCH | (L1) Ensure 'Turn off heap termination on corruption' is set to 'Disabled'"
+- name: "SCORED | 18.9.30.3 | PATCH | (L1) Ensure Turn off heap termination on corruption is set to Disabled"
   ansible.windows.win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windows\Explorer
       name: NoHeapTerminationOnCorruption
@@ -1801,7 +1801,7 @@
       - rule_18.9.30.3
       - patch
 
-- name: "SCORED | 18.9.30.4 | PATCH | (L1) Ensure 'Turn off shell protocol protected mode' is set to 'Disabled'"
+- name: "SCORED | 18.9.30.4 | PATCH | (L1) Ensure Turn off shell protocol protected mode is set to Disabled"
   ansible.windows.win_regedit:
       path: HKLM:\Software\Microsoft\Windows\Currentversion\Policies\Explorer
       name: PreXPSP2ShellProtocolBehavior
@@ -1815,7 +1815,7 @@
       - rule_18.9.30.4
       - patch
 
-- name: "SCORED | 18.9.39.1 | PATCH | (L2) Ensure 'Turn off location' is set to 'Enabled'"
+- name: "SCORED | 18.9.39.1 | PATCH | (L2) Ensure Turn off location is set to Enabled"
   ansible.windows.win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windows\Locationandsensors
       name: DisableLocation
@@ -1829,7 +1829,7 @@
       - rule_18.9.39.1
       - patch
 
-- name: "SCORED | 18.9.43.1 | PATCH | (L2) Ensure 'Allow Message Service Cloud Sync' is set to 'Disabled'"
+- name: "SCORED | 18.9.43.1 | PATCH | (L2) Ensure Allow Message Service Cloud Sync is set to Disabled"
   ansible.windows.win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windows\Messaging
       name: AllowMessageSync
@@ -1843,7 +1843,7 @@
       - rule_18.9.43.1
       - patch
 
-- name: "SCORED | 18.9.44.1 | PATCH | (L1) Ensure 'Block all consumer Microsoft account user authentication' is set to 'Enabled'"
+- name: "SCORED | 18.9.44.1 | PATCH | (L1) Ensure Block all consumer Microsoft account user authentication is set to Enabled"
   ansible.windows.win_regedit:
       path: HKLM:\Software\Policies\Microsoft\MicrosoftAccount
       name: DisableUserAuth
@@ -1857,7 +1857,7 @@
       - rule_18.9.44.1
       - patch
 
-- name: "SCORED | 18.9.52.1 | PATCH | (L1) Ensure 'Prevent the usage of OneDrive for file storage' is set to 'Enabled'"
+- name: "SCORED | 18.9.52.1 | PATCH | (L1) Ensure Prevent the usage of OneDrive for file storage is set to Enabled"
   ansible.windows.win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windows\Onedrive
       name: DisableFileSyncNGSC
@@ -1871,7 +1871,7 @@
       - rule_18.9.52.1
       - patch
 
-- name: "SCORED | 18.9.59.2.2 | PATCH | (L1) Ensure 'Do not allow passwords to be saved' is set to 'Enabled'"
+- name: "SCORED | 18.9.59.2.2 | PATCH | (L1) Ensure Do not allow passwords to be saved is set to Enabled"
   ansible.windows.win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windows Nt\Terminal Services
       name: DisablePasswordSaving
@@ -1885,7 +1885,7 @@
       - rule_18.9.58.2.2
       - patch
 
-- name: "SCORED | 18.9.59.3.2.1 | PATCH | (L2) Ensure 'Restrict Remote Desktop Services users to a single Remote Desktop Services session' is set to 'Enabled'"
+- name: "SCORED | 18.9.59.3.2.1 | PATCH | (L2) Ensure Restrict Remote Desktop Services users to a single Remote Desktop Services session is set to Enabled"
   ansible.windows.win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windows Nt\Terminal Services
       name: fSingleSessionPerUser
@@ -1913,7 +1913,7 @@
       - rule_18.9.59.3.3.1
       - patch
 
-- name: "SCORED | 18.9.59.3.3.2 | PATCH | (L1) Ensure 'Do not allow drive redirection' is set to 'Enabled'"
+- name: "SCORED | 18.9.59.3.3.2 | PATCH | (L1) Ensure Do not allow drive redirection is set to Enabled"
   ansible.windows.win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windows Nt\Terminal Services
       name: fDisableCdm
@@ -1927,7 +1927,7 @@
       - rule_18.9.59.3.3.2
       - patch
 
-- name: "SCORED | 18.9.59.3.3.3 | PATCH | (L2) Ensure 'Do not allow LPT port redirection' is set to 'Enabled'"
+- name: "SCORED | 18.9.59.3.3.3 | PATCH | (L2) Ensure Do not allow LPT port redirection is set to Enabled"
   ansible.windows.win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windows Nt\Terminal Services
       name: fDisableLPT
@@ -1941,7 +1941,7 @@
       - rule_18.9.59.3.3.3
       - patch
 
-- name: "SCORED | 18.9.59.3.3.4 | PATCH | (L2) Ensure 'Do not allow supported Plug and Play device redirection' is set to 'Enabled'"
+- name: "SCORED | 18.9.59.3.3.4 | PATCH | (L2) Ensure Do not allow supported Plug and Play device redirection is set to Enabled"
   ansible.windows.win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windows Nt\Terminal Services
       name: fDisablePNPRedir
@@ -1955,7 +1955,7 @@
       - rule_18.9.59.3.3.4
       - patch
 
-- name: "SCORED | 18.9.59.3.9.1 | PATCH | (L1) Ensure 'Always prompt for password upon connection' is set to 'Enabled'"
+- name: "SCORED | 18.9.59.3.9.1 | PATCH | (L1) Ensure Always prompt for password upon connection is set to Enabled"
   ansible.windows.win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windows Nt\Terminal Services
       name: fPromptForPassword
@@ -1969,7 +1969,7 @@
       - rule_18.9.59.3.9.1
       - patch
 
-- name: "SCORED | 18.9.59.3.9.2 | PATCH | (L1) Ensure 'Require secure RPC communication' is set to 'Enabled'"
+- name: "SCORED | 18.9.59.3.9.2 | PATCH | (L1) Ensure Require secure RPC communication is set to Enabled"
   ansible.windows.win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windows Nt\Terminal Services
       name: fEncryptRPCTraffic
@@ -1983,7 +1983,7 @@
       - rule_18.9.59.3.9.2
       - patch
 
-- name: "SCORED | 18.9.59.3.9.3 | PATCH | (L1) Ensure 'Require use of specific security layer for remote (RDP) connections' is set to 'Enabled: SSL'"
+- name: "SCORED | 18.9.59.3.9.3 | PATCH | (L1) Ensure Require use of specific security layer for remote (RDP) connections is set to Enabled: SSL"
   ansible.windows.win_regedit:
       path: HKLM:\SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services
       name: SecurityLayer
@@ -1997,7 +1997,7 @@
       - rule_18.9.59.3.9.3
       - patch
 
-- name: "SCORED | 18.9.59.3.9.4 | PATCH | (L1) Ensure 'Require user authentication for remote connections by using Network Level Authentication' is set to 'Enabled'"
+- name: "SCORED | 18.9.59.3.9.4 | PATCH | (L1) Ensure Require user authentication for remote connections by using Network Level Authentication is set to Enabled"
   ansible.windows.win_regedit:
       path: HKLM:\SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services
       name: UserAuthentication
@@ -2011,7 +2011,7 @@
       - rule_18.9.59.3.9.4
       - patch
 
-- name: "SCORED | 18.9.59.3.9.5 | PATCH | (L1) Ensure 'Set client connection encryption level' is set to 'Enabled: High Level'"
+- name: "SCORED | 18.9.59.3.9.5 | PATCH | (L1) Ensure Set client connection encryption level is set to Enabled: High Level"
   ansible.windows.win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windows Nt\Terminal Services
       name: MinEncryptionLevel
@@ -2025,7 +2025,7 @@
       - rule_18.9.59.3.9.5
       - patch
 
-- name: "SCORED | 18.9.59.3.10.1 | PATCH | (L2) Ensure 'Set time limit for active but idle Remote Desktop Services sessions' is set to 'Enabled: 15 minutes or less'"
+- name: "SCORED | 18.9.59.3.10.1 | PATCH | (L2) Ensure Set time limit for active but idle Remote Desktop Services sessions is set to Enabled: 15 minutes or less"
   ansible.windows.win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windows Nt\Terminal Services
       name: MaxIdleTime
@@ -2039,7 +2039,7 @@
       - rule_18.9.59.3.10.1
       - patch
 
-- name: "SCORED | 18.9.59.3.10.2 | PATCH | (L2) Ensure 'Set time limit for disconnected sessions' is set to 'Enabled: 1 minute'"
+- name: "SCORED | 18.9.59.3.10.2 | PATCH | (L2) Ensure Set time limit for disconnected sessions is set to Enabled: 1 minute"
   ansible.windows.win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windows Nt\Terminal Services
       name: MaxDisconnectionTime
@@ -2053,7 +2053,7 @@
       - rule_18.9.59.3.10.2
       - patch
 
-- name: "SCORED | 18.9.59.3.11.1 | PATCH | (L1) Ensure 'Do not delete temp folders upon exit' is set to 'Disabled'"
+- name: "SCORED | 18.9.59.3.11.1 | PATCH | (L1) Ensure Do not delete temp folders upon exit is set to Disabled"
   ansible.windows.win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windows Nt\Terminal Services
       name: DeleteTempDirsOnExit
@@ -2067,7 +2067,7 @@
       - rule_18.9.59.3.11.1
       - patch
 
-- name: "SCORED | 18.9.59.3.11.2 | PATCH | (L1) Ensure 'Do not use temporary folders per session' is set to 'Disabled'"
+- name: "SCORED | 18.9.59.3.11.2 | PATCH | (L1) Ensure Do not use temporary folders per session is set to Disabled"
   ansible.windows.win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windows Nt\Terminal Services
       name: PerSessionTempDir
@@ -2081,7 +2081,7 @@
       - rule_18.9.59.3.11.2
       - patch
 
-- name: "SCORED | 18.9.60.1 | PATCH | (L1) Ensure 'Prevent downloading of enclosures' is set to 'Enabled'"
+- name: "SCORED | 18.9.60.1 | PATCH | (L1) Ensure Prevent downloading of enclosures is set to Enabled"
   ansible.windows.win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Internet Explorer\Feeds
       name: DisableEnclosureDownload
@@ -2095,7 +2095,7 @@
       - rule_18.9.60.1
       - patch
 
-- name: "SCORED | 18.9.61.2 | PATCH | (L2) Ensure 'Allow Cloud Search' is set to 'Enabled: Disable Cloud Search'"
+- name: "SCORED | 18.9.61.2 | PATCH | (L2) Ensure Allow Cloud Search is set to Enabled: Disable Cloud Search"
   ansible.windows.win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windows\Windows Search
       name: AllowCloudSearch
@@ -2109,7 +2109,7 @@
       - rule_18.9.61.2
       - patch
 
-- name: "SCORED | 18.9.61.3 | PATCH | (L1) Ensure 'Allow indexing of encrypted files' is set to 'Disabled'"
+- name: "SCORED | 18.9.61.3 | PATCH | (L1) Ensure Allow indexing of encrypted files is set to Disabled"
   ansible.windows.win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windows\Windows Search
       name: AllowIndexingEncryptedStoresOrItems
@@ -2123,7 +2123,7 @@
       - rule_18.9.61.3
       - patch
 
-- name: "SCORED | 18.9.66.1 | PATCH | (L2) Ensure 'Turn off KMS Client Online AVS Validation' is set to 'Enabled'"
+- name: "SCORED | 18.9.66.1 | PATCH | (L2) Ensure Turn off KMS Client Online AVS Validation is set to Enabled"
   ansible.windows.win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windows Nt\Currentversion\Software Protection Platform
       name: NoGenTicket
@@ -2137,7 +2137,7 @@
       - rule_18.9.66.1
       - patch
 
-- name: "SCORED | 18.9.77.3.1 | PATCH | (L1) Ensure 'Configure local setting override for reporting to Microsoft MAPS' is set to 'Disabled'"
+- name: "SCORED | 18.9.77.3.1 | PATCH | (L1) Ensure Configure local setting override for reporting to Microsoft MAPS is set to Disabled"
   ansible.windows.win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windows Defender\Spynet
       name: LocalSettingOverrideSpynetReporting
@@ -2151,7 +2151,7 @@
       - rule_18.9.77.3.1
       - patch
 
-- name: "SCORED | 18.9.77.3.2 | PATCH | (L2) Ensure 'Join Microsoft MAPS' is set to 'Disabled'"
+- name: "SCORED | 18.9.77.3.2 | PATCH | (L2) Ensure Join Microsoft MAPS is set to Disabled"
   ansible.windows.win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windows Defender\Spynet
       name: SpynetReporting
@@ -2165,7 +2165,7 @@
       - rule_18.9.77.3.2
       - patch
 
-- name: "SCORED | 18.9.77.7.1 | PATCH | (L1) Ensure 'Turn on behavior monitoring' is set to 'Enabled'"
+- name: "SCORED | 18.9.77.7.1 | PATCH | (L1) Ensure Turn on behavior monitoring is set to Enabled"
   ansible.windows.win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windows Defender\Real-Time Protection
       name: DisableBehaviorMonitoring
@@ -2179,7 +2179,7 @@
       - rule_18.9.77.7.1
       - patch
 
-- name: "SCORED | 18.9.77.9.1 | PATCH | (L2) Ensure 'Configure Watson events' is set to 'Disabled'"
+- name: "SCORED | 18.9.77.9.1 | PATCH | (L2) Ensure Configure Watson events is set to Disabled"
   ansible.windows.win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windows Defender\Reporting
       name: DisableGenericRePorts
@@ -2193,7 +2193,7 @@
       - rule_18.9.77.9.1
       - patch
 
-- name: "SCORED | 18.9.77.10.1 | PATCH | (L1) Ensure 'Scan removable drives' is set to 'Enabled'"
+- name: "SCORED | 18.9.77.10.1 | PATCH | (L1) Ensure Scan removable drives is set to Enabled"
   ansible.windows.win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windows Defender\Scan
       name: DisableRemovableDriveScanning
@@ -2207,7 +2207,7 @@
       - rule_18.9.77.10.1
       - patch
 
-- name: "SCORED | 18.9.77.10.2 | PATCH | (L1) Ensure 'Turn on e-mail scanning' is set to 'Enabled'"
+- name: "SCORED | 18.9.77.10.2 | PATCH | (L1) Ensure Turn on e-mail scanning is set to Enabled"
   ansible.windows.win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windows Defender\Scan
       name: DisableEmailScanning
@@ -2221,7 +2221,7 @@
       - rule_18.9.77.10.2
       - patch
 
-- name: "SCORED | 18.9.77.13.3.1 | PATCH | (L1) Ensure 'Prevent users and apps from accessing dangerous websites' is set to 'Enabled: Block'"
+- name: "SCORED | 18.9.77.13.3.1 | PATCH | (L1) Ensure Prevent users and apps from accessing dangerous websites is set to Enabled: Block"
   ansible.windows.win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windows Defender\Windows Defender Exploit Guard\Network Protection
       name: EnableNetworkProtection
@@ -2235,7 +2235,7 @@
       - rule_18.9.77.13.3.1
       - patch
 
-- name: "SCORED | 18.9.77.14 | PA | (L1) Ensure 'Configure detection for potentially unwanted applications' is set to 'Enabled: Block'"
+- name: "SCORED | 18.9.77.14 | PA | (L1) Ensure Configure detection for potentially unwanted applications is set to Enabled: Block"
   ansible.windows.win_regedit:
       path: HKLM:\SOFTWARE\Policies\Microsoft\Windows Defender
       name: PUAProtection
@@ -2249,7 +2249,7 @@
       - rule_18.9.77.14
       - patch
 
-- name: "SCORED | 18.9.77.15 | PATCH | (L1) Ensure 'Turn off Windows Defender AntiVirus' is set to 'Disabled'"
+- name: "SCORED | 18.9.77.15 | PATCH | (L1) Ensure Turn off Windows Defender AntiVirus is set to Disabled"
   ansible.windows.win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windows Defender
       name: DisableAntiSpyware
@@ -2263,16 +2263,16 @@
       - rule_18.9.77.15
       - patch
 
-- name: "SCORED | 18.9.80.1.1 | PATCH | (L1) Ensure 'Configure Windows Defender SmartScreen' is set to 'Enabled: Warn and prevent bypass'"
+- name: "SCORED | 18.9.80.1.1 | PATCH | (L1) Ensure Configure Windows Defender SmartScreen is set to Enabled: Warn and prevent bypass"
   block:
-      - name: "SCORED | 18.9.80.1.1 | PATCH | (L1) Ensure 'Configure Windows Defender SmartScreen' is set to 'Enabled: Warn and prevent bypass' | EnableSmartScreen"
+      - name: "SCORED | 18.9.80.1.1 | PATCH | (L1) Ensure Configure Windows Defender SmartScreen is set to Enabled: Warn and prevent bypass | EnableSmartScreen"
         ansible.windows.win_regedit:
             path: HKLM:\Software\Policies\Microsoft\Windows\System
             name: EnableSmartScreen
             data: 1
             type: dword
 
-      - name: "SCORED | 18.9.80.1.1 | PATCH | (L1) Ensure 'Configure Windows Defender SmartScreen' is set to 'Enabled: Warn and prevent bypass' | ShellSmartScreenLevel"
+      - name: "SCORED | 18.9.80.1.1 | PATCH | (L1) Ensure Configure Windows Defender SmartScreen is set to Enabled: Warn and prevent bypass | ShellSmartScreenLevel"
         ansible.windows.win_regedit:
             path: HKLM:\Software\Policies\Microsoft\Windows\System
             name: ShellSmartScreenLevel
@@ -2286,7 +2286,7 @@
       - rule_18.9.80.1.1
       - patch
 
-- name: "SCORED | 18.9.84.1 | PATCH | (L2) Ensure 'Allow suggested apps in Windows Ink Workspace' is set to 'Disabled'"
+- name: "SCORED | 18.9.84.1 | PATCH | (L2) Ensure Allow suggested apps in Windows Ink Workspace is set to Disabled"
   ansible.windows.win_regedit:
       path: HKLM:\Software\Policies\Microsoft\WindowsInkWorkspace
       name: AllowSuggestedAppsInWindowsInkWorkspace
@@ -2300,7 +2300,7 @@
       - rule_18.9.84.1
       - patch
 
-- name: "SCORED | 18.9.84.2 | PATCH | (L1) Ensure 'Allow Windows Ink Workspace' is set to 'Enabled: On, but disallow access above lock' OR 'Disabled' but not 'Enabled: On'"
+- name: "SCORED | 18.9.84.2 | PATCH | (L1) Ensure Allow Windows Ink Workspace is set to Enabled: On, but disallow access above lock OR Disabled but not Enabled: On"
   ansible.windows.win_regedit:
       path: HKLM:\SOFTWARE\Policies\Microsoft\WindowsInkWorkspace
       name: AllowWindowsInkWorkspace
@@ -2314,7 +2314,7 @@
       - rule_18.9.84.2
       - patch
 
-- name: "SCORED | 18.9.85.1 | PATCH | (L1) Ensure 'Allow user control over installs' is set to 'Disabled'"
+- name: "SCORED | 18.9.85.1 | PATCH | (L1) Ensure Allow user control over installs is set to Disabled"
   ansible.windows.win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windows\Installer
       name: EnableUserControl
@@ -2328,7 +2328,7 @@
       - rule_18.9.85.1
       - patch
 
-- name: "SCORED | 18.9.85.2 | PATCH | (L1) Ensure 'Always install with elevated privileges' is set to 'Disabled'"
+- name: "SCORED | 18.9.85.2 | PATCH | (L1) Ensure Always install with elevated privileges is set to Disabled"
   ansible.windows.win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windows\Installer
       name: AlwaysInstallElevated
@@ -2342,7 +2342,7 @@
       - rule_18.9.85.2
       - patch
 
-- name: "SCORED | 18.9.85.3 | PATCH | (L2) Ensure 'Prevent Internet Explorer security prompt for Windows Installer scripts' is set to 'Disabled'"
+- name: "SCORED | 18.9.85.3 | PATCH | (L2) Ensure Prevent Internet Explorer security prompt for Windows Installer scripts is set to Disabled"
   ansible.windows.win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windows\Installer
       name: SafeForScripting
@@ -2356,7 +2356,7 @@
       - rule_18.9.85.3
       - patch
 
-- name: "SCORED | 18.9.86.1 | PATCH | (L1) Ensure 'Sign-in and lock last interactive user automatically after a restart' is set to 'Disabled'"
+- name: "SCORED | 18.9.86.1 | PATCH | (L1) Ensure Sign-in and lock last interactive user automatically after a restart is set to Disabled"
   ansible.windows.win_regedit:
       path: HKLM:\Software\Microsoft\Windows\Currentversion\Policies\System
       name: DisableAutomaticRestartSignOn
@@ -2370,7 +2370,7 @@
       - rule_18.9.86.1
       - patch
 
-- name: "SCORED | 18.9.95.1 | PATCH | (L1) Ensure 'Turn on PowerShell Script Block Logging' is set to 'Disabled'"
+- name: "SCORED | 18.9.95.1 | PATCH | (L1) Ensure Turn on PowerShell Script Block Logging is set to Disabled"
   ansible.windows.win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windows\Powershell\Scriptblocklogging
       name: EnableScriptBlockLogging
@@ -2384,7 +2384,7 @@
       - rule_18.9.95.1
       - patch
 
-- name: "SCORED | 18.9.95.2 | PATCH | (L1) Ensure 'Turn on PowerShell Transcription' is set to 'Disabled'"
+- name: "SCORED | 18.9.95.2 | PATCH | (L1) Ensure Turn on PowerShell Transcription is set to Disabled"
   ansible.windows.win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windows\Powershell\Transcription
       name: EnableTranscripting
@@ -2398,7 +2398,7 @@
       - rule_18.9.95.2
       - patch
 
-- name: "SCORED | 18.9.97.1.1 | PATCH | (L1) Ensure 'Allow Basic authentication' is set to 'Disabled'"
+- name: "SCORED | 18.9.97.1.1 | PATCH | (L1) Ensure Allow Basic authentication is set to Disabled"
   ansible.windows.win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windows\Winrm\Client
       name: AllowBasic
@@ -2413,7 +2413,7 @@
       - rule_18.9.97.1.1
       - patch
 
-- name: "SCORED | 18.9.97.1.2 | PATCH | (L1) Ensure 'Allow unencrypted traffic' is set to 'Disabled'"
+- name: "SCORED | 18.9.97.1.2 | PATCH | (L1) Ensure Allow unencrypted traffic is set to Disabled"
   ansible.windows.win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windows\Winrm\Client
       name: AllowUnencryptedTraffic
@@ -2428,7 +2428,7 @@
       - rule_18.9.97.1.2
       - patch
 
-- name: "SCORED | 18.9.97.1.3 | PATCH | (L1) Ensure 'Disallow Digest authentication' is set to 'Enabled'"
+- name: "SCORED | 18.9.97.1.3 | PATCH | (L1) Ensure Disallow Digest authentication is set to Enabled"
   ansible.windows.win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windows\Winrm\Client
       name: AllowDigest
@@ -2442,7 +2442,7 @@
       - rule_18.9.97.1.3
       - patch
 
-- name: "SCORED | 18.9.97.2.1 | PATCH | (L1) Ensure 'Allow Basic authentication' is set to 'Disabled'"
+- name: "SCORED | 18.9.97.2.1 | PATCH | (L1) Ensure Allow Basic authentication is set to Disabled"
   ansible.windows.win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windows\Winrm\Service
       name: AllowBasic
@@ -2458,7 +2458,7 @@
       - patch
 
 # This control will have to be set to Enabled (1) to allow for continued remote management via Ansible following machine restart
-- name: "SCORED | 18.9.97.2.2 | PATCH | (L2) Ensure 'Allow remote server management through WinRM' is set to 'Disabled'"
+- name: "SCORED | 18.9.97.2.2 | PATCH | (L2) Ensure Allow remote server management through WinRM is set to Disabled"
   ansible.windows.win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windows\Winrm\Service
       name: AllowAutoConfig
@@ -2473,7 +2473,7 @@
       - rule_18.9.97.2.2
       - patch
 
-- name: "SCORED | 18.9.97.2.3 | PATCH | (L1) Ensure 'Allow unencrypted traffic' is set to 'Disabled'"
+- name: "SCORED | 18.9.97.2.3 | PATCH | (L1) Ensure Allow unencrypted traffic is set to Disabled"
   ansible.windows.win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windows\Winrm\Service
       name: AllowUnencryptedTraffic
@@ -2488,7 +2488,7 @@
       - rule_18.9.97.2.3
       - patch
 
-- name: "SCORED | 18.9.97.2.4 | PATCH | (L1) Ensure 'Disallow WinRM from storing RunAs credentials' is set to 'Enabled'"
+- name: "SCORED | 18.9.97.2.4 | PATCH | (L1) Ensure Disallow WinRM from storing RunAs credentials is set to Enabled"
   ansible.windows.win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windows\Winrm\Service
       name: DisableRunAs
@@ -2503,7 +2503,7 @@
       - patch
 
 # This control will have to be set to Enabled (1) to allow for continued remote management via Ansible following machine restart
-- name: "SCORED | 18.9.98.1 | PATCH | (L2) Ensure 'Allow Remote Shell Access' is set to 'Disabled'"
+- name: "SCORED | 18.9.98.1 | PATCH | (L2) Ensure Allow Remote Shell Access is set to Disabled"
   ansible.windows.win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windows\Winrm\Service\Winrs
       name: AllowRemoteShellAccess
@@ -2518,7 +2518,7 @@
       - rule_18.9.98.1
       - patch
 
-- name: "SCORED | 18.9.99.2.1 | PATCH | (L1) Ensure 'Prevent users from modifying settings' is set to 'Enabled'"
+- name: "SCORED | 18.9.99.2.1 | PATCH | (L1) Ensure Prevent users from modifying settings is set to Enabled"
   ansible.windows.win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windows Defender Security Center\App and Browser protection
       name: DisallowExploitProtectionOverride
@@ -2532,16 +2532,16 @@
       - rule_18.9.99.2.1
       - patch
 
-- name: "SCORED | 18.9.102.1.1 | PATCH | (L1) Ensure 'Manage preview builds' is set to 'Enabled: Disable preview builds'"
+- name: "SCORED | 18.9.102.1.1 | PATCH | (L1) Ensure Manage preview builds is set to Enabled: Disable preview builds"
   block:
-      - name: "SCORED | 18.9.102.1.1 | PATCH | (L1) Ensure 'Manage preview builds' is set to 'Enabled: Disable preview builds' | ManagePreviewBuilds"
+      - name: "SCORED | 18.9.102.1.1 | PATCH | (L1) Ensure Manage preview builds is set to Enabled: Disable preview builds | ManagePreviewBuilds"
         ansible.windows.win_regedit:
             path: HKLM:\Software\Policies\Microsoft\Windows\WindowsUpdate
             name: ManagePreviewBuilds
             data: 1
             type: dword
 
-      - name: "SCORED | 18.9.102.1.1 | PATCH | (L1) Ensure 'Manage preview builds' is set to 'Enabled: Disable preview builds' | ManagePreviewBuilds"
+      - name: "SCORED | 18.9.102.1.1 | PATCH | (L1) Ensure Manage preview builds is set to Enabled: Disable preview builds | ManagePreviewBuilds"
         ansible.windows.win_regedit:
             path: HKLM:\Software\Policies\Microsoft\Windows\WindowsUpdate
             name: ManagePreviewBuildsPolicyValue
@@ -2555,23 +2555,23 @@
       - rule_18.9.102.1.1
       - patch
 
-- name: "SCORED | 18.9.102.1.2 | PATCH | (L1) Ensure 'Select when Preview Builds and Feature Updates are received' is set to 'Enabled: Semi-Annual Channel, 180 or more days'"
+- name: "SCORED | 18.9.102.1.2 | PATCH | (L1) Ensure Select when Preview Builds and Feature Updates are received is set to Enabled: Semi-Annual Channel, 180 or more days"
   block:
-      - name: "SCORED | 18.9.102.1.2 | PATCH | (L1) Ensure 'Select when Preview Builds and Feature Updates are received' is set to 'Enabled: Semi-Annual Channel, 180 or more days' | DeferFeatureUpdates"
+      - name: "SCORED | 18.9.102.1.2 | PATCH | (L1) Ensure Select when Preview Builds and Feature Updates are received is set to Enabled: Semi-Annual Channel, 180 or more days | DeferFeatureUpdates"
         ansible.windows.win_regedit:
             path: HKLM:\Software\Policies\Microsoft\Windows\WindowsUpdate
             name: DeferFeatureUpdates
             data: 1
             type: dword
 
-      - name: "SCORED | 18.9.102.1.2 | PATCH | (L1) Ensure 'Select when Preview Builds and Feature Updates are received' is set to 'Enabled: Semi-Annual Channel, 180 or more days' | DeferFeatureUpdatesPeriodInDays"
+      - name: "SCORED | 18.9.102.1.2 | PATCH | (L1) Ensure Select when Preview Builds and Feature Updates are received is set to Enabled: Semi-Annual Channel, 180 or more days | DeferFeatureUpdatesPeriodInDays"
         ansible.windows.win_regedit:
             path: HKLM:\Software\Policies\Microsoft\Windows\WindowsUpdate
             name: DeferFeatureUpdatesPeriodInDays
             data: 180
             type: dword
 
-      - name: "SCORED | 18.9.102.1.2 | PATCH | (L1) Ensure 'Select when Preview Builds and Feature Updates are received' is set to 'Enabled: Semi-Annual Channel, 180 or more days' | BranchReadinessLevel"
+      - name: "SCORED | 18.9.102.1.2 | PATCH | (L1) Ensure Select when Preview Builds and Feature Updates are received is set to Enabled: Semi-Annual Channel, 180 or more days | BranchReadinessLevel"
         ansible.windows.win_regedit:
             path: HKLM:\Software\Policies\Microsoft\Windows\WindowsUpdate
             name: BranchReadinessLevel
@@ -2585,16 +2585,16 @@
       - rule_18.9.102.1.2
       - patch
 
-- name: "SCORED | 18.9.102.1.3 | PATCH | (L1) Ensure 'Select when Quality Updates are received' is set to 'Enabled: 0 days'"
+- name: "SCORED | 18.9.102.1.3 | PATCH | (L1) Ensure Select when Quality Updates are received is set to Enabled: 0 days"
   block:
-      - name: "SCORED | 18.9.102.1.3 | PATCH | (L1) Ensure 'Select when Quality Updates are received' is set to 'Enabled: 0 days' | DeferQualityUpdates"
+      - name: "SCORED | 18.9.102.1.3 | PATCH | (L1) Ensure Select when Quality Updates are received is set to Enabled: 0 days | DeferQualityUpdates"
         ansible.windows.win_regedit:
             path: HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate
             name: DeferQualityUpdates
             data: 1
             type: dword
 
-      - name: "SCORED | 18.9.102.1.3 | PATCH | (L1) Ensure 'Select when Quality Updates are received' is set to 'Enabled: 0 days' | DeferQualityUpdatesPeriodInDays"
+      - name: "SCORED | 18.9.102.1.3 | PATCH | (L1) Ensure Select when Quality Updates are received is set to Enabled: 0 days | DeferQualityUpdatesPeriodInDays"
         ansible.windows.win_regedit:
             path: HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate
             name: DeferQualityUpdatesPeriodInDays
@@ -2608,7 +2608,7 @@
       - rule_18.9.102.1.3
       - patch
 
-- name: "SCORED | 18.9.102.2 | PATCH | (L1) Ensure 'Configure Automatic Updates' is set to 'Enabled'"
+- name: "SCORED | 18.9.102.2 | PATCH | (L1) Ensure Configure Automatic Updates is set to Enabled"
   ansible.windows.win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windows\Windowsupdate\Au
       name: "{{ item.name }}"
@@ -2625,7 +2625,7 @@
       - rule_18.9.101.2
       - patch
 
-- name: "SCORED | 18.9.102.3 | PATCH | (L1) Ensure 'Configure Automatic Updates: Scheduled install day' is set to '0 - Every day'"
+- name: "SCORED | 18.9.102.3 | PATCH | (L1) Ensure Configure Automatic Updates: Scheduled install day is set to 0 - Every day"
   ansible.windows.win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windows\Windowsupdate\Au
       name: ScheduledInstallDay
@@ -2639,7 +2639,7 @@
       - rule_18.9.102.3
       - patch
 
-- name: "SCORED | 18.9.102.4 | PATCH | (L1) Ensure 'No auto-restart with logged on users for scheduled automatic updates installations' is set to 'Disabled'"
+- name: "SCORED | 18.9.102.4 | PATCH | (L1) Ensure No auto-restart with logged on users for scheduled automatic updates installations is set to Disabled"
   ansible.windows.win_regedit:
       path: HKLM:\Software\Policies\Microsoft\Windows\Windowsupdate\Au
       name: NoAutoRebootWithLoggedOnUsers
